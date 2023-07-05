@@ -1,0 +1,28 @@
+@use "../mixins";
+
+.page-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  height: fit-content;
+  background-color: blue;
+  border-radius: 30px;
+
+  font-size: 16px;
+  line-height: 130%;
+  color: white;
+
+  transition: background-color 0.1s, color 0.1s;
+
+  padding: 10px 60px;
+
+  &:hover {
+    background-color: white;
+
+    color: blue;
+
+    transition: background-color 0.1s, color 0.1s;
+  }
+}
