@@ -70,3 +70,8 @@ window.addEventListener('load', () => {
     })
   }
 })
+
+// ? --- Анимация бекграунда на главной странице
+document.querySelectorAll('.index-content__item').forEach((item) => item.addEventListener('mouseover', () => {
+  item.classList.remove('index-content__item--hiddenbg');
+}))

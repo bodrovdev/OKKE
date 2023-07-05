@@ -1,7 +1,52 @@
-@@include('components/_base/_base-header.html')
+@@include('components/_base/_base-header.html', {
+"class": "index",
+})
 
 <main class="page-content">
-
+  <div class="index-content">
+    <div class="index-content__item index-content__item--hiddenbg" style="background: url('img/image/index-bg.png') no-repeat; background-size: cover;">
+      <div class="index-content__item-container">
+        <video class="index-content__item-video" src="#"></video>
+        <div class="index-content__item-wrapper"></div>
+        <figure class="index-content__item-image base-figure">
+          <img class="index-content__item-img" src="img/image/logo-care.png" width="104" height="125" alt="#">
+        </figure>
+        <p class="index-content__item-text base-par">
+          Линейка автокосметики
+          и автохимии для бережного
+          и эффективного ухода
+          за вашим автомобилем.
+        </p>
+      </div>
+    </div>
+    <div class="index-content__item index-content__item--hiddenbg" style="background: url('img/image/index-bg.png') no-repeat; background-size: cover;">
+      <div class="index-content__item-container">
+        <video class="index-content__item-video" src="#"></video>
+        <div class="index-content__item-wrapper"></div>
+        <figure class="index-content__item-image base-figure">
+          <img class="index-content__item-img" src="img/image/logo-chemical.png" width="107" height="125" alt="#">
+        </figure>
+        <p class="index-content__item-text base-par">
+          Линейка уникальных
+          дезинфицирующих средств
+        </p>
+      </div>
+    </div>
+    <div class="index-content__item index-content__item--hiddenbg" style="background: url('img/image/index-bg.png') no-repeat; background-size: cover;">
+      <div class="index-content__item-container">
+        <video class="index-content__item-video" src="#"></video>
+        <div class="index-content__item-wrapper"></div>
+        <figure class="index-content__item-image base-figure">
+          <img class="index-content__item-img" src="img/image/logo-prof.png" width="105" height="115" alt="#">
+        </figure>
+        <p class="index-content__item-text base-par">
+          Линейка продуктов созданная
+          для решения не только повседневных,
+          но и профессиональных задач
+        </p>
+      </div>
+    </div>
+  </div>
 </main>
 
 @@include('components/_base/_base-footer.html')
