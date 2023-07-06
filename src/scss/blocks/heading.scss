@@ -1,0 +1,119 @@
+@use "../mixins";
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.heading {
+  position: relative;
+  top: 103px;
+
+  display: flex;
+
+  width: 100%;
+  height: 541px;
+
+  z-index: 1;
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 77%;
+
+    z-index: 3;
+  }
+
+  &__video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: 2;
+  }
+
+  &__content {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 130px;
+
+    margin: auto 0 100px 90px;
+    z-index: 4;
+  }
+
+  &__content-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 25px;
+
+    max-width: 650px;
+  }
+
+  &__content-title {
+    font-family: var(--font-family-second);
+    font-size: 30px;
+    font-weight: 400px;
+    line-height: 130%;
+    color: var(--color-white);
+  }
+
+  &__content-text {
+    font-size: 15px;
+    font-weight: 400px;
+    line-height: 130%;
+    color: var(--color-white);
+  }
+
+  &__round-link {
+    position: relative;
+
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+  }
+
+  &__round-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &__round-text {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-white);
+
+    & div {
+      width: 142px !important;
+      height: 142px !important;
+
+      animation-name: circle;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+}

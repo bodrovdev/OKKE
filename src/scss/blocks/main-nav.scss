@@ -5,19 +5,19 @@
   from {
     top: 0;
     left: 50%;
-    transform: translateX(-50%) rotate(45deg)
+    transform: translateX(-50%) rotate(45deg);
   }
 
   50% {
     top: 0;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
   }
 
   to {
     top: 8px;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
   }
 }
 
@@ -37,7 +37,7 @@
   100% {
     top: 0;
     left: 50%;
-    // background-color: var(--color-golden-fizz);
+    background-color: var(--color-white);
     transform: translateX(-50%) rotate(45deg);
   }
 }
@@ -78,7 +78,7 @@
   100% {
     bottom: 0;
     left: 50%;
-    // background-color: var(--color-golden-fizz);
+    background-color: var(--color-white);
     transform: translateX(-50%) rotate(-45deg);
   }
 }
