@@ -33,21 +33,42 @@
   <header class="page-header">
 
     <div class="page-header__inline">
-      <div class="page-header__inline-container base-container">
+      <div class="page-header__inline-container page-header__inline-container-index base-container">
         <a class="page-header__inline-logo page-header__inline-logo-index base-link" href="index.html">
           <figure class="page-header__inline-logo-image index-logo base-figure">
             <img class="page-header__inline-logo-img" src="img/image/logo-index.png" width="49" height="51" alt="Логотип">
           </figure>
           <figure class="page-header__inline-logo-image care-logo base-figure">
-            <img class="page-header__inline-logo-img" src="img/image/logo-index.png" width="50" height="60" alt="Логотип">
+            <img class="page-header__inline-logo-img" src="img/image/logo-care.png" width="50" height="60" alt="Логотип">
           </figure>
           <figure class="page-header__inline-logo-image chemical-logo base-figure">
-            <img class="page-header__inline-logo-img" src="img/image/logo-index.png" width="50" height="60" alt="Логотип">
+            <img class="page-header__inline-logo-img" src="img/image/logo-chemical.png" width="50" height="60" alt="Логотип">
           </figure>
           <figure class="page-header__inline-logo-image prof-logo base-figure">
-            <img class="page-header__inline-logo-img" src="img/image/logo-index.png" width="50" height="60" alt="Логотип">
+            <img class="page-header__inline-logo-img" src="img/image/logo-prof.png" width="50" height="60" alt="Логотип">
           </figure>
         </a>
+
+        <div class="page-header__inline-info">
+          <ul class="page-header__inline-socials-list base-list">
+            <li class="page-header__inline-socials-item">
+              <a class="page-header__inline-socials-link base-link" href="#">
+                <img class="page-header__inline-socials-icon" src="img/image/header-socials-1.png" width="15" height="16" aria-hidden="true">
+                <span class="page-header__inline-socials-text">Whats App</span>
+              </a>
+              <a class="page-header__inline-socials-link base-link" href="#">
+                <img class="page-header__inline-socials-icon" src="img/image/header-socials-2.png" width="15" height="16" aria-hidden="true">
+                <span class="page-header__inline-socials-text">Telegram</span>
+              </a>
+              <a class="page-header__inline-socials-link base-link" href="#">
+                <img class="page-header__inline-socials-icon" src="img/image/header-socials-3.png" width="15" height="16" aria-hidden="true">
+                <span class="page-header__inline-socials-text">Мы в VK</span>
+              </a>
+            </li>
+          </ul>
+          <button class="page-header__inline-modal-button modal-with-form__button base-button">Обратная связь</button>
+        </div>
+
         <div class="page-header__inline-nav">
           <ul class="page-header__inline-nav-list base-list">
             <li class="page-header__inline-nav-item">
@@ -99,12 +120,29 @@
 
   </header>
 
+<style>
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
 <main class="page-content">
   <div class="index-content">
-    <div class="index-content__item index-content__item--hiddenbg" style="background: url('img/image/index-bg.png') no-repeat; background-size: cover;">
+    <a class="index-content__item index-content__item--bg-hidden base-link" href="page-care.html">
+
+      <div class="index-content__item-graphic">
+        <div class="index-content__item-graphic-container">
+          <img class="index-content__item-graphic-img" src="img/image/index-bg.png" alt="#">
+          <div class="index-content__item-graphic-cover"></div>
+        </div>
+      </div>
+
       <div class="index-content__item-container">
-        <video class="index-content__item-video" src="#"></video>
-        <div class="index-content__item-wrapper"></div>
         <figure class="index-content__item-image base-figure">
           <img class="index-content__item-img" src="img/image/logo-care.png" width="104" height="125" alt="#">
         </figure>
@@ -115,11 +153,17 @@
           за вашим автомобилем.
         </p>
       </div>
-    </div>
-    <div class="index-content__item index-content__item--hiddenbg" style="background: url('img/image/index-bg.png') no-repeat; background-size: cover;">
+    </a>
+    <a class="index-content__item index-content__item--bg-hidden base-link" href="#">
+
+      <div class="index-content__item-graphic">
+        <div class="index-content__item-graphic-container">
+          <img class="index-content__item-graphic-img" src="img/image/index-bg2.png" alt="#">
+          <div class="index-content__item-graphic-cover"></div>
+        </div>
+      </div>
+
       <div class="index-content__item-container">
-        <video class="index-content__item-video" src="#"></video>
-        <div class="index-content__item-wrapper"></div>
         <figure class="index-content__item-image base-figure">
           <img class="index-content__item-img" src="img/image/logo-chemical.png" width="107" height="125" alt="#">
         </figure>
@@ -128,11 +172,17 @@
           дезинфицирующих средств
         </p>
       </div>
-    </div>
-    <div class="index-content__item index-content__item--hiddenbg" style="background: url('img/image/index-bg.png') no-repeat; background-size: cover;">
+    </a>
+    <a class="index-content__item index-content__item--bg-hidden base-link" href="#">
+
+      <div class="index-content__item-graphic">
+        <div class="index-content__item-graphic-container">
+          <img class="index-content__item-graphic-img" src="img/image/index-bg3.png" alt="#">
+          <div class="index-content__item-graphic-cover"></div>
+        </div>
+      </div>
+
       <div class="index-content__item-container">
-        <video class="index-content__item-video" src="#"></video>
-        <div class="index-content__item-wrapper"></div>
         <figure class="index-content__item-image base-figure">
           <img class="index-content__item-img" src="img/image/logo-prof.png" width="105" height="115" alt="#">
         </figure>
@@ -142,7 +192,7 @@
           но и профессиональных задач
         </p>
       </div>
-    </div>
+    </a>
   </div>
 </main>
 
