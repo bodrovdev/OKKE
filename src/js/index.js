@@ -21,7 +21,7 @@ burger.addEventListener('click', () => {
 
 // ? --- Модалка с формой
 window.addEventListener('load', () => {
-  if (!document.querySelector('#modal_with_form') === null) {
+  if (!(document.querySelector('#modal_with_form') === null)) {
 
     let modal_with_form = document.getElementById('modal-with-form');
     let modal_with_form_close = document.getElementById('modal-with-form-close');
@@ -64,14 +64,23 @@ window.addEventListener('load', () => {
 
 // ? --- Отключение подсветки ошибок в инпутах
 window.addEventListener('load', () => {
-  if (!document.querySelectorAll('input') === null) {
+  if (!(document.querySelectorAll('input') === null)) {
     document.querySelectorAll('input').forEach((input) => {
       input.setAttribute('spellcheck', 'false');
     })
   }
 })
 
-// ? --- Анимация бекграунда на главной странице
-document.querySelectorAll('.index-content__item').forEach((item) => item.addEventListener('mouseover', () => {
-  item.classList.remove('index-content__item--hiddenbg');
-}))
+// ? --- Анимация фона элементов на главной странице
+window.addEventListener('load', () => {
+  if (!(document.querySelectorAll('.index-content__item') === null)) {
+    document.querySelectorAll('.index-content__item').forEach((item) => {
+      item.addEventListener('mouseover', () => {
+        item.classList.remove('index-content__item--bg-hidden');
+      })
+      item.addEventListener('mouseleave', () => {
+        item.classList.add('index-content__item--bg-hidden');
+      })
+    })
+  }
+});

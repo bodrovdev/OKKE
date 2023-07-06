@@ -2,12 +2,29 @@
 "class": "index",
 })
 
+<style>
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
 <main class="page-content">
   <div class="index-content">
-    <div class="index-content__item index-content__item--hiddenbg" style="background: url('img/image/index-bg.png') no-repeat; background-size: cover;">
+    <a class="index-content__item index-content__item--bg-hidden base-link" href="page-care.html">
+
+      <div class="index-content__item-graphic">
+        <div class="index-content__item-graphic-container">
+          <img class="index-content__item-graphic-img" src="img/image/index-bg.png" alt="#">
+          <div class="index-content__item-graphic-cover"></div>
+        </div>
+      </div>
+
       <div class="index-content__item-container">
-        <video class="index-content__item-video" src="#"></video>
-        <div class="index-content__item-wrapper"></div>
         <figure class="index-content__item-image base-figure">
           <img class="index-content__item-img" src="img/image/logo-care.png" width="104" height="125" alt="#">
         </figure>
@@ -18,11 +35,17 @@
           за вашим автомобилем.
         </p>
       </div>
-    </div>
-    <div class="index-content__item index-content__item--hiddenbg" style="background: url('img/image/index-bg.png') no-repeat; background-size: cover;">
+    </a>
+    <a class="index-content__item index-content__item--bg-hidden base-link" href="#">
+
+      <div class="index-content__item-graphic">
+        <div class="index-content__item-graphic-container">
+          <img class="index-content__item-graphic-img" src="img/image/index-bg2.png" alt="#">
+          <div class="index-content__item-graphic-cover"></div>
+        </div>
+      </div>
+
       <div class="index-content__item-container">
-        <video class="index-content__item-video" src="#"></video>
-        <div class="index-content__item-wrapper"></div>
         <figure class="index-content__item-image base-figure">
           <img class="index-content__item-img" src="img/image/logo-chemical.png" width="107" height="125" alt="#">
         </figure>
@@ -31,11 +54,17 @@
           дезинфицирующих средств
         </p>
       </div>
-    </div>
-    <div class="index-content__item index-content__item--hiddenbg" style="background: url('img/image/index-bg.png') no-repeat; background-size: cover;">
+    </a>
+    <a class="index-content__item index-content__item--bg-hidden base-link" href="#">
+
+      <div class="index-content__item-graphic">
+        <div class="index-content__item-graphic-container">
+          <img class="index-content__item-graphic-img" src="img/image/index-bg3.png" alt="#">
+          <div class="index-content__item-graphic-cover"></div>
+        </div>
+      </div>
+
       <div class="index-content__item-container">
-        <video class="index-content__item-video" src="#"></video>
-        <div class="index-content__item-wrapper"></div>
         <figure class="index-content__item-image base-figure">
           <img class="index-content__item-img" src="img/image/logo-prof.png" width="105" height="115" alt="#">
         </figure>
@@ -45,7 +74,7 @@
           но и профессиональных задач
         </p>
       </div>
-    </div>
+    </a>
   </div>
 </main>
 
