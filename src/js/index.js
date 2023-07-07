@@ -1,23 +1,41 @@
-import { lock, unlock } from 'tua-body-scroll-lock'
+import { lock, unlock } from 'tua-body-scroll-lock';
 
-// ? --- *Необычное* меню
-let burger = document.getElementById('burger');
-let page_header = document.querySelector('.page-header');
+// ? Мобильное меню
+const burger = document.getElementById('burger');
+const mobile_menu = document.getElementById('mobile_menu');
+const main_nav = document.querySelector('.main-nav');
+const nav_nav_list = document.querySelector('.main-nav__mobile-menu-list');
 
-// ? - Открытие *необычного* меню по клику на бургер
+function openMobileMenu() {
+  burger.classList.add('main-nav__burger--active');
+  mobile_menu.classList.add('main-nav__mobile-menu--active');
+  document.body.classList.add('body-cover');
+  lock(mobile_menu);
+}
+function closeMobileMenu() {
+  burger.classList.remove('main-nav__burger--active');
+  mobile_menu.classList.remove('main-nav__mobile-menu--active');
+  document.body.classList.remove('body-cover');
+  unlock(mobile_menu);
+}
+
+// ? Открытие / закрытие меню по клику на бургер
 burger.addEventListener('click', () => {
-  burger.classList.toggle('main-nav__burger--active');
-  page_header.classList.toggle('page-header--active');
-  document.body.classList.toggle('scrollbar-hidden');
-
-  burger.classList.contains('main-nav__burger--active') ?
-    (function () {
-      lock(document.querySelector('.page-header__main-nav'));
-    }()) :
-    (function () {
-      unlock(document.querySelector('.page-header__main-nav'));
-    }())
+  burger.classList.contains('main-nav__burger--active') ? closeMobileMenu() : openMobileMenu();
 })
+
+// ? Варианты закрытия меню
+document.addEventListener('click', (e) => {
+  switch (e) {
+    case (!main_nav.contains(e.target)):
+      closeMobileMenu();
+      break;
+
+    case (nav_nav_list.contains(e.target) && e.target.tagName === 'A'):
+      closeMobileMenu();
+      break;
+  }
+});
 
 // ? --- Модалка с формой
 // window.addEventListener('load', () => {

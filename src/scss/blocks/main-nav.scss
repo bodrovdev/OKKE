@@ -85,18 +85,176 @@
 
 // Стили
 .main-nav {
+  position: relative;
+
   width: 100%;
-  min-width: 50px;
-  height: 56px;
+  height: 100px;
+  // overflow: hidden;
 
   z-index: 10;
 
   &__container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     height: 100%;
+
+    margin: 0 30px;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 90%;
+
+      margin: 0 5%;
+    }
+
+    &--index {
+      & .main-nav__logo-block-side {
+        display: none;
+      }
+    }
+  }
+
+  &__logo-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__logo {
+    display: flex;
+
+    & .main-nav__logo-image {
+      display: none;
+    }
+  }
+
+  &__logo-index .index-logo {
+    display: flex;
+
+    width: 49px;
+    height: 51px;
+  }
+
+  &__logo-care .care-logo {
+    display: flex;
+
+    width: 50px;
+    height: 60px;
+  }
+
+  &__logo-chemical .chemical-logo {
+    display: flex;
+  }
+
+  &__logo-prof .prof-logo {
+    display: flex;
+  }
+
+  &__logo-block-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
+  }
+
+  &__socials-list {
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+
+    padding: 0 40px 0 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 1px;
+      height: 100%;
+      background-color: #eeeeee;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &__socials-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__socials-icon {
+    flex-shrink: 0;
+  }
+
+  &__socials-text {
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 130%;
+    color: var(--color-black);
+  }
+
+  &__modal-button {
+    font-family: var(--font-family-default);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 130%;
+    color: var(--color-black);
+  }
+
+  &__burger-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    margin: 0 0 0 auto;
+
+    & .main-nav__burger {
+      position: relative;
+
+      cursor: pointer;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
+  }
+
+  &__nav-item {
+    display: flex;
+  }
+
+  &__nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 130%;
+    color: var(--color-black);
   }
 
   &__burger {
@@ -185,5 +343,89 @@
 
     transition-delay: 0.4s;
     transition: background-color 0.1s
+  }
+
+  &__mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 80vw;
+    height: -webkit-fill-available;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+
+    padding: 0 5%;
+
+    &--active {
+      transform: none;
+      transition: transform 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+    }
+  }
+
+  &__mobile-menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100px;
+
+    margin: 0 0 60px 0;
+  }
+
+  &__mobile-menu-image {
+    width: 49px;
+    height: 51px;
+  }
+
+  &__mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    margin: 0 0 60px 0;
+  }
+
+  &__mobile-menu-item {
+    display: flex;
+
+    width: 100%;
+  }
+
+  &__mobile-menu-link {
+    display: inline-block;
+
+    width: 100%;
+
+    font-family: var(--font-family-second);
+    font-size: 25px;
+    line-height: 130%;
+    color: var(--color-black);
+  }
+
+  &__mobile-menu-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    &-img {
+      flex-shrink: 0;
+    }
   }
 }

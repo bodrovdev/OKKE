@@ -12,7 +12,7 @@
 
 .heading {
   position: relative;
-  top: 103px;
+  top: 100px;
 
   display: flex;
 
@@ -20,6 +20,13 @@
   height: 541px;
 
   z-index: 1;
+
+  @include mixins.respond-to(notDesktop) {
+    top: 0;
+
+    height: auto;
+    min-height: 500px;
+  }
 
   &__cover {
     position: absolute;
@@ -55,6 +62,14 @@
 
     margin: auto 0 100px 90px;
     z-index: 4;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+
+      width: 90%;
+
+      margin: 40px 5%;
+    }
   }
 
   &__content-info {
@@ -65,6 +80,10 @@
     gap: 25px;
 
     max-width: 650px;
+
+    @include mixins.respond-to(notDesktop) {
+      max-width: 100%;
+    }
   }
 
   &__content-title {
@@ -73,6 +92,12 @@
     font-weight: 400px;
     line-height: 130%;
     color: var(--color-white);
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 25px;
+
+      max-width: 100%;
+    }
   }
 
   &__content-text {
@@ -85,10 +110,8 @@
   &__round-link {
     position: relative;
 
-    transition: transform 0.3s;
-
-    &:hover {
-      transform: scale(1.1);
+    &:hover .heading__round-img {
+      transform: translateY(-50%) scale(1.1);
       transition: transform 0.3s;
     }
   }
@@ -96,9 +119,10 @@
   &__round-img {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 62px;
 
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    transition: transform 0.3s;
   }
 
   &__round-text {
