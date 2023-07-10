@@ -41,8 +41,6 @@ body {
 		display: none;
 	}
 
-	// ? отключаем скроллбар
-
 	&::before {
 		content: "";
 		position: absolute;
@@ -56,6 +54,8 @@ body {
 		pointer-events: none;
 
 		transition: background-color 0.3s;
+
+		z-index: 2;
 	}
 }
 

@@ -124,3 +124,8 @@ window.addEventListener('load', () => {
     new CircleType(round_link.querySelector('.heading__round-text'));
   }
 })
+
+// ? --- Показать страницу только после загрузки
+window.addEventListener('load', () => {
+  document.body.removeAttribute('style');
+})
