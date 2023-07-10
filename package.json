@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",
+    "postinstall": "patch-package",
     "cz": "npm exec git-cz",
     "deploy": "gh-pages -d build"
   },
@@ -33,6 +34,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^4.1.0",
     "gulp-terser": "^2.1.0",
+    "patch-package": "^7.0.0",
     "postcss-preset-env": "^7.2.3",
     "require-dir": "^1.2.0",
     "sass": "^1.45.0",
