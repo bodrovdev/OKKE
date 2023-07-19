@@ -1,11 +1,12 @@
 @use "../mixins";
 
 .description {
-  padding: 40px 0;
+  padding: 45px 0 65px 0;
 
   &__container {
     display: flex;
     align-items: center;
+    gap: 125px;
 
     width: auto;
     height: 100%;
@@ -26,11 +27,9 @@
     &--left {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 20px;
 
       max-width: 850px;
-
-      margin: 0 65px 0 0;
 
       @include mixins.respond-to(notDesktop) {
         max-width: 100%;
@@ -63,7 +62,7 @@
   &__column-text {
     font-size: 15px;
     font-weight: 400;
-    line-height: 130%;
+    line-height: 24px;
     color: #cbccd2;
   }
 
