@@ -1,7 +1,26 @@
 import Swiper from 'swiper/bundle';
 
-// ? Мобильный слайдер
+// ? Слайдер товаров в блоке каталога
+let catalogue__slider = new Swiper(".catalogue__slider", {
+  direction: "horizontal",
+  spaceBetween: 20,
 
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: "auto",
+    },
+  },
+
+  pagination: {
+    el: ".catalogue__slider-pagination",
+    clickable: true,
+  },
+});
+
+// ? Мобильный слайдер
 // var mobile_slider_init = false;
 
 // function mobile_slider() {
@@ -38,7 +57,6 @@ import Swiper from 'swiper/bundle';
 // window.addEventListener("resize", mobile_slider);
 
 // ? Обычный слайдер
-
 // let regular_slider = new Swiper(".regular-slider-class", {
 //   direction: "horizontal",
 //   spaceBetween: 25,

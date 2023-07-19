@@ -1,12 +1,87 @@
+@use "../mixins";
+
 .description {
-  height: 1px;
-  min-height: 355px;
+  padding: 40px 0;
 
   &__container {
+    display: flex;
+    align-items: center;
+
+    width: auto;
     height: 100%;
+
+    margin: 0 100px;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+      gap: 40px;
+
+      margin: 0 5%;
+    }
   }
 
   &__column {
     height: 100%;
+
+    &--left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      max-width: 850px;
+
+      margin: 0 65px 0 0;
+
+      @include mixins.respond-to(notDesktop) {
+        max-width: 100%;
+
+        margin: 0;
+      }
+    }
+
+    &--right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
   }
+
+  &__column-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 130%;
+    color: var(--color-white);
+    text-transform: uppercase;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__column-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #cbccd2;
+  }
+
+  &__column-img {
+    width: 82px;
+    height: 89px;
+  }
+
+  &__column-label {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 130%;
+    color: var(--color-white);
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.page-care__description .description {
+  background-color: #242529;
 }

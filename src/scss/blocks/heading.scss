@@ -60,9 +60,11 @@
 
     display: flex;
     align-items: center;
-    gap: 130px;
+    gap: 100px;
 
-    margin: auto 0 100px 90px;
+    width: auto;
+
+    margin: auto 100px 120px 100px;
     z-index: 4;
 
     @include mixins.respond-to(notDesktop) {
@@ -82,7 +84,7 @@
     justify-content: center;
     gap: 25px;
 
-    max-width: 650px;
+    max-width: 660px;
 
     @include mixins.respond-to(notDesktop) {
       max-width: 100%;
@@ -95,9 +97,10 @@
     font-weight: 400px;
     line-height: 130%;
     color: var(--color-white);
+    text-transform: uppercase;
 
     @include mixins.respond-to(notDesktop) {
-      font-size: 25px;
+      font-size: 18px;
 
       max-width: 100%;
     }
