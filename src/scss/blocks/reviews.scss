@@ -1,0 +1,49 @@
+@use "../mixins";
+
+.reviews {
+  background-color: #242529;
+
+  padding: 75px 0 70px 0;
+
+  &__title {
+    display: inline-block;
+
+    font-size: 22px;
+    line-height: 130%;
+    font-weight: 700;
+    color: var(--color-white);
+    text-transform: uppercase;
+
+    margin: 0 0 25px 180px;
+  }
+
+  &__slider {
+    padding: 0 180px;
+  }
+
+  &__slider-slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    border: 1px solid #484848;
+    border-radius: 30px;
+
+    padding: 20px;
+  }
+
+  &__slider-slide-stars {
+    & svg {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &__slider-slide-market-img {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

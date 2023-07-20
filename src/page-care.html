@@ -25,6 +25,28 @@
     })
   </div>
 
+  <section class="reviews">
+    <h2 class="reviews__title base-title">Отзывы</h2>
+
+    <div class="reviews__slider swiper">
+      <div class="reviews__slider-wrapper swiper-wrapper">
+        @@include('components/_bem/_reviews-item.html', {
+        "name": "Владимир Я.",
+        "rating": "5",
+        "market": "Yandex",
+        "text": "Купил для смазки дверных уплотнителей авто. Эффект - зимой (при морозе под минус 30) все нормально открывалось и закрывалось. Рекомендую",
+        })
+        @@include('components/_bem/_reviews-item.html', {
+        "name": "Владимир Я.",
+        "rating": "5",
+        "market": "Ozon",
+        "text": "Купил для смазки дверных уплотнителей авто. Эффект - зимой (при морозе под минус 30) все нормально открывалось и закрывалось. Рекомендую",
+        })
+      </div>
+      <div class="reviews__slider-pagination"></div>
+    </div>
+  </section>
+
 </main>
 
 @@include('components/_base/_base-footer.html')

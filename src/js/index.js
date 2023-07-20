@@ -125,6 +125,36 @@ window.addEventListener('load', () => {
   }
 })
 
+// ? --- Рейтинг в блоке отзывов и выбор источника
+window.addEventListener('load', () => {
+  if (!(document.querySelector('.reviews__slider-slide') === null)) {
+    let slides = document.querySelectorAll('.reviews__slider-slide');
+
+    slides.forEach((slide) => {
+
+      slide.querySelectorAll('.reviews__slider-slide-market-img').forEach((img) => {
+        slide.dataset.market === img.dataset.market ? img.classList.add('reviews__slider-slide-market-img--active') : img;
+      })
+
+      for (let i = 0; i < slide.dataset.rating; i++) {
+        slide.querySelector('.reviews__slider-slide-stars').innerHTML +=
+          `<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 543 516.4" style="enable-background:new 0 0 543 516.4;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            fill: #FFC901;
+          }
+        </style>
+        <g>
+          <g>
+            <polygon class="st0" points="271.5,0 355.4,170 543,197.3 407.2,329.6 439.3,516.4 271.5,428.2 103.7,516.4 135.8,329.6 0,197.3 187.6,170 		" />
+          </g>
+        </g>
+      </svg>`
+      }
+    })
+  }
+})
+
 // ? --- Показать страницу только после загрузки
 window.addEventListener('load', () => {
   document.body.removeAttribute('style');

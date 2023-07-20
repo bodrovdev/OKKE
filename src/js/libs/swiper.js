@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
 
 // ? Слайдер товаров в блоке каталога
-let catalogue__slider = new Swiper(".catalogue__slider", {
+let catalogue_slider = new Swiper(".catalogue__slider", {
   direction: "horizontal",
   spaceBetween: 20,
 
@@ -16,6 +16,28 @@ let catalogue__slider = new Swiper(".catalogue__slider", {
 
   pagination: {
     el: ".catalogue__slider-pagination",
+    type: 'progressbar',
+    clickable: true,
+  },
+});
+
+// ? Слайдер отзывов в блоке отзывов
+let reviews_slider = new Swiper(".reviews__slider", {
+  direction: "horizontal",
+  spaceBetween: 30,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: "auto",
+    },
+  },
+
+  pagination: {
+    el: ".reviews__slider-pagination",
+    type: 'progressbar',
     clickable: true,
   },
 });

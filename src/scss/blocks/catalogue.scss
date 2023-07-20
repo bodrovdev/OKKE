@@ -1,13 +1,25 @@
 @use "../mixins";
 
 .catalogue {
-  padding: 60px 0 40px 0;
+  padding: 60px 0 50px 0;
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 0 5%;
+  }
 
   &__slider {
     width: 100%;
     max-width: 100%;
 
     padding: 0 60px;
+
+    @include mixins.respond-to(notDesktop) {
+      padding: 0;
+    }
+  }
+
+  &__slider-wrapper {
+    margin: 0 0 35px 0;
   }
 
   &__title {
@@ -20,6 +32,10 @@
     text-transform: uppercase;
 
     margin: 0 0 50px 100px;
+
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 0 20px 0;
+    }
   }
 
   &__slider-slide {
@@ -28,10 +44,35 @@
     gap: 25px;
 
     width: 500px;
+    height: 1px;
     min-height: 300px;
     border: 1px solid #dcdcdc;
 
     padding: 40px 10px 50px 20px;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+
+      width: 100%;
+      height: auto;
+      min-height: auto;
+
+      padding: 20px;
+    }
+  }
+
+  &__slider-slide-img {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    object-fit: cover;
+
+    @include mixins.respond-to(notDesktop) {
+      width: 200px;
+      height: 200px;
+
+      margin: 0 auto;
+    }
   }
 
   &__slider-slide-title {
@@ -60,7 +101,97 @@
   &__slider-slide-bottom {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
+
+    @include mixins.respond-to(notDesktop) {
+      justify-content: space-between;
+    }
+  }
+
+  &__slider-slide-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background-color: #FDD5BF;
+    border-radius: 25px;
+
+    padding: 5px 5px 5px 20px;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #e3bfab;
+
+      transition: background-color 0.3s;
+    }
+
+    @include mixins.respond-to(notDesktop) {
+      width: 60%;
+
+      padding: 10px 5px 10px 20px;
+    }
+  }
+
+  &__slider-slide-button-caption {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 130%;
+    color: var(--color-black);
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 14px;
+    }
+  }
+
+  &__slider-slide-button-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+  }
+
+  &__slider-slide-link {
+    position: relative;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 130%;
+    color: #a5a7b0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+      background-color: #a5a7b0;
+    }
+  }
+
+  &__slider-pagination {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    width: 100%;
+    max-width: 1180px;
+    background: #d7d9e0;
+
+    margin: 0 auto;
+
+    & .swiper-pagination-progressbar-fill {
+      background: #f2a69f;
+    }
   }
 }
