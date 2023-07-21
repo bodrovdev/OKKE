@@ -29,15 +29,11 @@ burger.addEventListener('click', () => {
 
 // ? Варианты закрытия меню
 document.addEventListener('click', (e) => {
-  switch (e) {
-    case (!main_nav.contains(e.target)):
-      closeMobileMenu();
-      break;
 
-    case (nav_nav_list.contains(e.target) && e.target.tagName === 'A'):
-      closeMobileMenu();
-      break;
-  }
+  !(main_nav.contains(e.target)) || nav_nav_list.contains(e.target) && e.target.tagName === 'A' ?
+    closeMobileMenu() :
+    main_nav;
+
 });
 
 // ? --- Модалка с формой
@@ -118,10 +114,12 @@ window.addEventListener('load', () => {
 
 // ? --- Скругление текста вокруг ссылки
 window.addEventListener('load', () => {
-
-  if (!(document.querySelectorAll('.round-link') === null)) {
-    let round_link = document.querySelector('.heading__round-link');
-    new CircleType(round_link.querySelector('.heading__round-text'));
+  if (document.querySelector('.round-link') === null) {
+    return;
+  }
+  else {
+    let round_link = document.querySelector('.round-link');
+    new CircleType(round_link.querySelector('.round-text'));
   }
 })
 
@@ -138,18 +136,7 @@ window.addEventListener('load', () => {
 
       for (let i = 0; i < slide.dataset.rating; i++) {
         slide.querySelector('.reviews__slider-slide-stars').innerHTML +=
-          `<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 543 516.4" style="enable-background:new 0 0 543 516.4;" xml:space="preserve">
-        <style type="text/css">
-          .st0 {
-            fill: #FFC901;
-          }
-        </style>
-        <g>
-          <g>
-            <polygon class="st0" points="271.5,0 355.4,170 543,197.3 407.2,329.6 439.3,516.4 271.5,428.2 103.7,516.4 135.8,329.6 0,197.3 187.6,170 		" />
-          </g>
-        </g>
-      </svg>`
+          `<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 543 516.4" style="enable-background:new 0 0 543 516.4;" xml:space="preserve"> <style type="text/css">.st0 {fill: #FFC901;}</style><g><g><polygon class="st0" points="271.5,0 355.4,170 543,197.3 407.2,329.6 439.3,516.4 271.5,428.2 103.7,516.4 135.8,329.6 0,197.3 187.6,170" /></g></g></svg>`
       }
     })
   }
