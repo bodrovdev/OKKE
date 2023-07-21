@@ -4,7 +4,7 @@
   padding: 60px 0 50px 0;
 
   @include mixins.respond-to(notDesktop) {
-    margin: 0 5%;
+    padding: 45px 0 65px 0;
   }
 
   &__slider {
@@ -14,7 +14,7 @@
     padding: 0 60px;
 
     @include mixins.respond-to(notDesktop) {
-      padding: 0;
+      padding: 0 5%;
     }
   }
 
@@ -34,7 +34,9 @@
     margin: 0 0 50px 100px;
 
     @include mixins.respond-to(notDesktop) {
-      margin: 0 0 20px 0;
+      font-size: 28px;
+
+      margin: 0 5% 20px 5%;
     }
   }
 
@@ -120,12 +122,18 @@
 
     padding: 5px 5px 5px 20px;
 
-    transition: background-color 0.3s;
+    transition: background-color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
 
     &:hover {
-      background-color: #e3bfab;
+      background-color: var(--color-brick-red);
 
-      transition: background-color 0.3s;
+      transition: background-color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+
+      & .catalogue__slider-slide-button-caption {
+        color: var(--color-white);
+
+        transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+      }
     }
 
     @include mixins.respond-to(notDesktop) {
@@ -165,6 +173,20 @@
     line-height: 130%;
     color: #a5a7b0;
 
+    transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+
+    &:hover {
+      color: var(--color-brick-red);
+
+      transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+
+      &::before {
+        background-color: var(--color-brick-red);
+
+        transition: background-color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -174,6 +196,8 @@
       width: 100%;
       height: 1px;
       background-color: #a5a7b0;
+
+      transition: background-color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
     }
   }
 

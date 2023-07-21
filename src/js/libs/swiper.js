@@ -3,14 +3,15 @@ import Swiper from 'swiper/bundle';
 // ? Слайдер товаров в блоке каталога
 let catalogue_slider = new Swiper(".catalogue__slider", {
   direction: "horizontal",
-  spaceBetween: 20,
 
   breakpoints: {
     320: {
-      slidesPerView: 1
+      slidesPerView: 1,
+      spaceBetween: 30,
     },
     768: {
       slidesPerView: "auto",
+      spaceBetween: 20,
     },
   },
 

@@ -314,10 +314,14 @@
   &__burger {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
-    width: 21px;
-    height: 14px;
+    // width: 21px;
+    // height: 14px;
+
+    width: 30px;
+    height: 24px;
+
     outline: none;
     border: none;
     cursor: pointer;
