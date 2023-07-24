@@ -138,6 +138,7 @@
 
     @include mixins.respond-to(notDesktop) {
       width: 60%;
+      max-width: 200px;
 
       padding: 10px 5px 10px 20px;
     }

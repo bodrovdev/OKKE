@@ -107,7 +107,7 @@ window.addEventListener('load', () => {
       Array.from(document.querySelectorAll('.index-content__item')).map((item, index) => {
         setTimeout(() => {
           item.classList.remove('index-content__item--bg-hidden');
-        }, index * 500);
+        }, index * 900);
       })
   }
 });
