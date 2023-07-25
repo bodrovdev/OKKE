@@ -15,7 +15,7 @@
 </style>
 
 <main class="page-content">
-  <div class="index-content">
+  <!-- <div class="index-content">
     <a class="index-content__item index-content__item--bg-hidden base-link" href="page-care.html">
 
       <div class="index-content__item-graphic">
@@ -76,7 +76,23 @@
         </p>
       </div>
     </a>
+  </div> -->
+
+  @@include('components/_bem/_heading.html', {
+  "video": "https://www.shutterstock.com/shutterstock/videos/1039037177/preview/stock-footage-blue-long-haul-semi-truck-with-cargo-trailer-full-of-goods-travels-at-night-turning-on-the.webm",
+  "title": "Линейка автокосметики и автохимии",
+  "text": "В линейке мы собрали самые необходимые средства, которые делают профессиональный уход за интерьером и экстерьером автомобиля доступным и функциональным.",
+  })
+
+  <div class="index__description">
+    @@include('components/_bem/_description.html', {
+    "title": "ОККЕ АВТО - каталог автохимии",
+    "text": "Линейка автокосметики и автохимии для бережного и эффективного ухода за вашим автомобилем.<br> В линейке мы собрали самые необходимые средства, которые делают профессиональный уход за<br> автомобилем доступным и функциональным. Наши продукты
+    помогут сохранить ваш автомобиль <br> отличном состоянии на долгие годы. Кроме того, мы постоянно работаем над улучшением и<br> расширением нашей линейки, чтобы предоставить нашим клиентам лучший выбор автокосметики<br> и автохимии на рынке. Наша цель -
+    обеспечить максимальную защиту, чистоту и блеск вашего<br> автомобиля, чтобы вы могли наслаждаться комфортной и безопасной ездой.<br> Профессиональный уход — это просто как раз два три, когда под рукой ОККЕ! ",
+    })
   </div>
+
 </main>
 
 @@include('components/_base/_base-footer.html')

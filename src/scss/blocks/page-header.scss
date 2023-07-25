@@ -9,7 +9,7 @@
 
   width: 100%;
 
-  z-index: 6;
+  // z-index: 6;
 
   @include mixins.respond-to(notDesktop) {
     position: relative;
