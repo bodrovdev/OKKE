@@ -88,7 +88,7 @@
   position: relative;
 
   width: 100%;
-  height: 100px;
+  height: 70px;
 
   z-index: 10;
 
@@ -309,7 +309,7 @@
   }
 
   &__burger {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -324,6 +324,10 @@
     cursor: pointer;
 
     z-index: 15;
+
+    @include mixins.respond-to(notDesktop) {
+      display: flex;
+    }
   }
 
   &__burger-line {
