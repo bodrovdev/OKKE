@@ -83,6 +83,22 @@
   }
 }
 
+#index .logo-index {
+  display: block;
+}
+
+#care .logo-care {
+  display: block;
+}
+
+#prof .logo-prof {
+  display: block;
+}
+
+#chemical .logo-chemical {
+  display: block;
+}
+
 // Стили
 .main-nav {
   position: relative;
@@ -112,16 +128,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 17px;
   }
 
   &__logo {
     display: flex;
 
-    transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-
     &:hover {
-      transform: scale(1.1);
+      & .main-nav__logo-image {
+        transform: scale(1.1);
+        transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+    }
+
+    &-image {
+      display: none;
+
       transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1);
     }
   }
@@ -130,21 +152,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 21px;
 
     @include mixins.respond-to(notDesktop) {
       display: none;
     }
   }
 
-  &__socials-list {
+  &__logo-nav-list {
     position: relative;
 
     display: flex;
-    align-items: flex-end;
-    gap: 25px;
+    gap: 18px;
 
-    padding: 0 40px 0 0;
+    padding: 0 20px 0 0;
 
     &::after {
       content: "";
@@ -160,77 +181,21 @@
     }
   }
 
-  &__socials-link {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-
-    width: 52px;
-    height: 40px;
-
-    transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-
-    &:hover {
-      & {
-        transform: translateY(-5px);
-        transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-      }
-    }
-  }
-
-  &__socials-icon {
-    flex-shrink: 0;
-  }
-
-  &__socials-text {
-    position: relative;
-
-    font-size: 9px;
-    font-weight: 500;
-    line-height: 130%;
-    color: var(--color-black);
+  &__logo-nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #323236;
+    text-transform: uppercase;
   }
 
   &__modal-button {
-    position: relative;
-
     font-family: var(--font-family-default);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
-    line-height: 130%;
-    color: var(--color-black);
-
-    transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-
-      width: 150%;
-      height: 150%;
-      background-color: var(--color-brick-red);
-
-      transform: translate(-50%, -50%) scale(0);
-      transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-
-      z-index: -1;
-    }
-
-    &:hover {
-      color: var(--color-white);
-      transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-
-      &::before {
-        transform: translate(-50%, -50%) scale(1);
-        transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1);
-      }
-    }
+    line-height: 30px;
+    color: #323236;
+    text-transform: uppercase;
   }
 
   &__burger-block {
@@ -259,7 +224,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 13px;
 
     @include mixins.respond-to(notDesktop) {
       display: none;
@@ -273,10 +238,11 @@
   &__nav-link {
     position: relative;
 
+    color: #323236;
     font-size: 14px;
     font-weight: 600;
-    line-height: 130%;
-    color: var(--color-black);
+    line-height: 30px;
+    text-transform: uppercase;
   }
 
   &__burger {

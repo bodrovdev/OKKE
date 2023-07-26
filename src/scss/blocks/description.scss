@@ -1,17 +1,17 @@
 @use "../mixins";
 
 .description {
-  padding: 45px 0 65px 0;
+  padding: 57px 0 65px 0;
 
   &__container {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 125px;
 
     width: auto;
     height: 100%;
 
-    margin: 0 100px;
+    margin: 0 105px;
 
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
@@ -29,7 +29,7 @@
       flex-direction: column;
       gap: 20px;
 
-      max-width: 850px;
+      max-width: 785px;
 
       @include mixins.respond-to(notDesktop) {
         max-width: 100%;
@@ -43,7 +43,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
 
       &:hover {
         & .description__column-label {
@@ -60,27 +60,22 @@
   }
 
   &__column-title {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 130%;
     color: var(--color-white);
     text-transform: uppercase;
-
-    @include mixins.respond-to(notDesktop) {
-      font-size: 18px;
-    }
   }
 
   &__column-text {
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
-    color: #cbccd2;
+    color: #CBCCD2;
   }
 
   &__column-img {
-    width: 82px;
-    height: 89px;
+    width: 69px;
+    height: 69px;
   }
 
   &__column-label {

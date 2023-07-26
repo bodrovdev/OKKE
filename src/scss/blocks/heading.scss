@@ -60,11 +60,11 @@
 
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 96px;
 
     width: auto;
 
-    margin: auto 100px 120px 100px;
+    margin: auto 105px 94px 105px;
     z-index: 4;
 
     @include mixins.respond-to(notDesktop) {
@@ -84,7 +84,7 @@
     justify-content: center;
     gap: 25px;
 
-    max-width: 660px;
+    max-width: 675px;
 
     @include mixins.respond-to(notDesktop) {
       max-width: 100%;
@@ -92,10 +92,11 @@
   }
 
   &__content-title {
-    font-family: var(--font-family-second);
+    font-family: var(--font-family-default);
     font-size: 30px;
-    font-weight: 400px;
-    line-height: 130%;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
     color: var(--color-white);
     text-transform: uppercase;
 
@@ -108,8 +109,8 @@
 
   &__content-text {
     font-size: 15px;
-    font-weight: 400px;
-    line-height: 130%;
+    font-weight: 500;
+    line-height: 24px;
     color: var(--color-white);
   }
 
@@ -141,6 +142,8 @@
     font-size: 13px;
     font-weight: 500;
     color: var(--color-white);
+
+    transition: color 0.1s cubic-bezier(0.65, 0, 0.35, 1);
 
     & div {
       width: 142px !important;
