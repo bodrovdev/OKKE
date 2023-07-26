@@ -1,6 +1,8 @@
 @use "../mixins";
 
 .description {
+  min-height: 361px;
+
   padding: 57px 0 65px 0;
 
   &__container {

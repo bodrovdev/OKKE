@@ -122,6 +122,12 @@
 
       margin: 0 5%;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 90%;
+
+      margin: 0 5%;
+    }
   }
 
   &__logo-block {
@@ -155,6 +161,10 @@
     gap: 21px;
 
     @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
       display: none;
     }
   }
@@ -229,6 +239,10 @@
     @include mixins.respond-to(notDesktop) {
       display: none;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      display: none;
+    }
   }
 
   &__nav-item {
@@ -263,6 +277,10 @@
     z-index: 15;
 
     @include mixins.respond-to(notDesktop) {
+      display: flex;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
       display: flex;
     }
   }
@@ -365,6 +383,12 @@
       padding: 0 5%;
     }
 
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 80vw;
+
+      padding: 0 5%;
+    }
+
     &--active {
       transform: none;
       transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
@@ -376,14 +400,14 @@
     align-items: center;
     justify-content: flex-start;
 
-    height: 100px;
+    height: 70px;
 
     margin: 0 0 60px 0;
   }
 
   &__mobile-menu-image {
-    width: 49px;
-    height: 51px;
+    width: 34px;
+    height: 38px;
   }
 
   &__mobile-menu-list {
@@ -395,6 +419,10 @@
     margin: 0 0 80px 0;
 
     @include mixins.respond-to(notDesktop) {
+      margin: 0 0 40px 0;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
       margin: 0 0 40px 0;
     }
   }
@@ -410,10 +438,11 @@
 
     width: 100%;
 
-    font-family: var(--font-family-second);
+    font-family: var(--font-family-default);
     font-size: 25px;
     line-height: 130%;
     color: var(--color-black);
+    text-transform: uppercase;
   }
 
   &__mobile-menu-socials {

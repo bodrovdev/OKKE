@@ -43,6 +43,25 @@ let reviews_slider = new Swiper(".reviews__slider", {
   },
 });
 
+// ? Слайдер на главной странице
+let index_slider = new Swiper(".brands__slider", {
+  direction: "horizontal",
+  spaceBetween: 30,
+  slidesPerView: 1,
+
+  pagination: {
+    el: ".brands__slider-pagination",
+    type: 'progressbar',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.brands__slider-navigation-arrow--next',
+    prevEl: '.brands__slider-navigation-arrow--prev',
+  },
+
+});
+
 // ? Мобильный слайдер
 // var mobile_slider_init = false;
 
