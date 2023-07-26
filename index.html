@@ -33,21 +33,21 @@
   <header class="page-header">
 
     <nav class="main-nav">
-      <div class="main-nav__container main-nav__container--index">
+      <div class="main-nav__container">
         <div class="main-nav__logo-block">
-          <a class="main-nav__logo main-nav__logo-index base-link" href="index.html">
+          <a class="main-nav__logo base-link" href="index.html">
             <figure class="main-nav__logo-image index-logo base-figure">
-              <img class="main-nav__logo-img" src="img/image/logo-index.png" width="49" height="51" alt="Логотип">
+              <img class="main-nav__logo-img" src="img/image/logo-index.png" width="34" height=38" alt="Логотип">
             </figure>
-            <figure class="main-nav__logo-image care-logo base-figure">
-              <img class="main-nav__logo-img" src="img/image/logo-care.png" width="50" height="60" alt="Логотип">
-            </figure>
-            <figure class="main-nav__logo-image chemical-logo base-figure">
-              <img class="main-nav__logo-img" src="img/image/logo-chemical.png" width="50" height="60" alt="Логотип">
-            </figure>
-            <figure class="main-nav__logo-image prof-logo base-figure">
-              <img class="main-nav__logo-img" src="img/image/logo-prof.png" width="50" height="60" alt="Логотип">
-            </figure>
+            <svg class="main-nav__logo-image care-logo" width="34" height="38" aria-hidden="true">
+              <use href="img/icon/sprite.svg#care-icon"></use>
+            </svg>
+            <svg class="main-nav__logo-image prof-logo" width="34" height="38" aria-hidden="true">
+              <use href="img/icon/sprite.svg#prof-icon"></use>
+            </svg>
+            <svg class="main-nav__logo-image chemical-logo" width="34" height="38" aria-hidden="true">
+              <use href="img/icon/sprite.svg#chemical-icon"></use>
+            </svg>
           </a>
           <div class="main-nav__logo-block-side">
             <ul class="main-nav__socials-list base-list">
@@ -144,7 +144,7 @@
 </style>
 
 <main class="page-content">
-  <div class="index-content">
+  <!-- <div class="index-content">
     <a class="index-content__item index-content__item--bg-hidden base-link" href="page-care.html">
 
       <div class="index-content__item-graphic">
@@ -205,7 +205,42 @@
         </p>
       </div>
     </a>
+  </div> -->
+
+  <section class="heading">
+  <div class="heading__cover"></div>
+  <video class="heading__video-background" src="https://www.shutterstock.com/shutterstock/videos/1039037177/preview/stock-footage-blue-long-haul-semi-truck-with-cargo-trailer-full-of-goods-travels-at-night-turning-on-the.webm" autoplay muted loop>
+  </video>
+  <div class="heading__content">
+    <div class="heading__content-info">
+      <h1 class="heading__content-title base-title">Линейка автокосметики и автохимии</h1>
+      <p class="heading__content-text base-par">В линейке мы собрали самые необходимые средства, которые делают профессиональный уход за интерьером и экстерьером автомобиля доступным и функциональным.</p>
+    </div>
+    <a class="heading__round-link round-link base-link" data-fancybox href="https://www.shutterstock.com/shutterstock/videos/1039037177/preview/stock-footage-blue-long-haul-semi-truck-with-cargo-trailer-full-of-goods-travels-at-night-turning-on-the.webm">
+      <span class="heading__round-text round-text">Открыть видео со звуком—Открыть видео со звуком—</span>
+      <!-- <img class="heading__round-img" width="22" height="24" src="img/image/play.png" aria-hidden="true"> -->
+      <svg class="heading__round-img" width="22" aria-hidden="true">
+        <use href="img/icon/sprite.svg#play-icon"></use>
+      </svg>
+    </a>
   </div>
+</section>
+
+  <div class="page-index__description">
+    <section class="description">
+  <div class="description__container">
+    <div class="description__column description__column--left">
+      <h2 class="description__column-title base-title">ОККЕ АВТО - каталог автохимии</h2>
+      <p class="description__column-text base-par">Линейка автокосметики и автохимии для бережного и эффективного ухода за вашим автомобилем.<br> В линейке мы собрали самые необходимые средства, которые делают профессиональный уход за<br> автомобилем доступным и функциональным. Наши продукты      помогут сохранить ваш автомобиль <br> отличном состоянии на долгие годы. Кроме того, мы постоянно работаем над улучшением и<br> расширением нашей линейки, чтобы предоставить нашим клиентам лучший выбор автокосметики<br> и автохимии на рынке. Наша цель -      обеспечить максимальную защиту, чистоту и блеск вашего<br> автомобиля, чтобы вы могли наслаждаться комфортной и безопасной ездой.<br> Профессиональный уход — это просто как раз два три, когда под рукой ОККЕ! </p>
+    </div>
+    <a class="description__column description__column--right base-link" href="#">
+      <img class="description__column-img" src="img/image/pdf.png" width="82" height="89" alt="#">
+      <span class="description__column-label">Скачать каталог</span>
+    </a>
+  </div>
+</section>
+  </div>
+
 </main>
 
 <footer class="page-footer">
