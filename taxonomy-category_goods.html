@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+
+  <link href="css/style.min.css?v=1.0" rel="stylesheet">
+  <title></title>
+</head>
+
+<body style="opacity: 0" id="care">
+
+  <div class="modal-with-form" id="modal_with_form">
+    <div class="modal-with-form__wrapper">
+      <button class="modal-with-form__close follow-change base-button" id="modal_with_form_close">
+        <svg class="modal-with-form__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-with-form__inner"></div>
+      <div class="modal-with-form__success">
+        <span class="modal-with-form__success-text">Спасибо, ваша заявка отправлена!</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="page-header">
+
+    <nav class="main-nav">
+      <div class="main-nav__container">
+        <div class="main-nav__logo-block">
+          <a class="main-nav__logo base-link" href="index.html">
+            <figure class="main-nav__logo-image logo-index base-figure">
+              <img class="main-nav__logo-img" src="img/image/logo-index.png" width="34" height="38" alt="Логотип">
+            </figure>
+            <figure class="main-nav__logo-image logo-care base-figure">
+              <img class="main-nav__logo-img" src="img/image/logo-care.svg" width="34" height="38" alt="Логотип">
+            </figure>
+            <figure class="main-nav__logo-image logo-prof base-figure">
+              <img class="main-nav__logo-img" src="img/image/logo-prof.svg" width="34" height="38" alt="Логотип">
+            </figure>
+            <figure class="main-nav__logo-image logo-chemical base-figure">
+              <img class="main-nav__logo-img" src="img/image/logo-chemical.svg" width="34" height="38" alt="Логотип">
+            </figure>
+          </a>
+          <div class="main-nav__logo-block-side">
+            <ul class="main-nav__logo-nav-list base-list">
+              <li class="main-nav__logo-nav-item">
+                <a class="main-nav__logo-nav-link hover-red base-link" href="taxonomy-category_goods.html">наши бренды</a>
+              </li>
+              <li class="main-nav__logo-nav-item">
+                <a class="main-nav__logo-nav-link hover-red base-link" href="#">производство</a>
+              </li>
+              <li class="main-nav__logo-nav-item">
+                <a class="main-nav__logo-nav-link hover-red base-link" href="#">новости</a>
+              </li>
+              <li class="main-nav__logo-nav-item">
+                <a class="main-nav__logo-nav-link hover-red base-link" href="#">контакты</a>
+              </li>
+            </ul>
+            <button class="main-nav__modal-button hover-red modal-with-form__button base-button">Обратная связь</button>
+          </div>
+        </div>
+        <div class="main-nav__burger-block">
+          <ul class="main-nav__nav-list base-list">
+            <li class="main-nav__nav-item">
+              <a class="main-nav__nav-link hover-red base-link" href="#">Okke Auto</a>
+            </li>
+            <li class="main-nav__nav-item">
+              <a class="main-nav__nav-link hover-red base-link" href="#">Okke Sani</a>
+            </li>
+            <li class="main-nav__nav-item">
+              <a class="main-nav__nav-link hover-red base-link" href="#">Okke Prof</a>
+            </li>
+          </ul>
+          <button class="main-nav__burger base-button" id="burger">
+            <span class="main-nav__burger-line"></span>
+          </button>
+        </div>
+      </div>
+      <div class="main-nav__mobile-menu" id="mobile_menu">
+        <a class="main-nav__mobile-menu-logo base-link" href="index.html">
+          <figure class="main-nav__mobile-menu-image base-figure">
+            <img class="main-nav__mobile-menu-img" src="img/image/logo-index.png" width="34" height="38" alt="Логотип">
+          </figure>
+        </a>
+        <ul class="main-nav__mobile-menu-list base-list">
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">наши бренды</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">производство</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">новости</a>
+          </li>
+          <li class="main-nav__mobile-menu-item">
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">контакты</a>
+          </li>
+        </ul>
+        <ul class="main-nav__mobile-menu-socials base-list">
+          <li class="main-nav__mobile-menu-socials-item">
+            <a class="main-nav__mobile-menu-socials-link base-link" href="#">
+              <img class="main-nav__mobile-menu-socials-icon" src="img/image/header-socials-1.png" width="15" height="16" aria-hidden="true">
+              <span class="main-nav__mobile-menu-socials-text">Whats App</span>
+            </a>
+          </li>
+          <li class="main-nav__mobile-menu-socials-item">
+            <a class="main-nav__mobile-menu-socials-link base-link" href="#">
+              <img class="main-nav__mobile-menu-socials-icon" src="img/image/header-socials-2.png" width="15" height="13" aria-hidden="true">
+              <span class="main-nav__mobile-menu-socials-text">Telegram</span>
+            </a>
+          </li>
+          <li class="main-nav__mobile-menu-socials-item">
+            <a class="main-nav__mobile-menu-socials-link base-link" href="#">
+              <img class="main-nav__mobile-menu-socials-icon" src="img/image/header-socials-3.png" width="21" height="12" aria-hidden="true">
+              <span class="main-nav__mobile-menu-socials-text">Мы в VK</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+<main class="page-content">
+
+  <section class="heading">
+  <video class="heading__video-background" src="https://www.shutterstock.com/shutterstock/videos/1039037177/preview/stock-footage-blue-long-haul-semi-truck-with-cargo-trailer-full-of-goods-travels-at-night-turning-on-the.webm" autoplay muted loop>
+  </video>
+  <div class="heading__content">
+    <div class="heading__content-info">
+      <h1 class="heading__content-title base-title">Линейка автокосметики и автохимии</h1>
+      <p class="heading__content-text base-par">В линейке мы собрали самые необходимые средства, которые делают профессиональный уход за интерьером и экстерьером автомобиля доступным и функциональным.</p>
+    </div>
+    <a class="heading__round-link round-link base-link" data-fancybox href="https://www.shutterstock.com/shutterstock/videos/1039037177/preview/stock-footage-blue-long-haul-semi-truck-with-cargo-trailer-full-of-goods-travels-at-night-turning-on-the.webm">
+      <span class="heading__round-text round-text">Открыть видео со звуком—Открыть видео со звуком—</span>
+      <svg class="heading__round-img" width="25" height="28" aria-hidden="true">
+        <use href="img/icon/sprite.svg#play2-icon"></use>
+      </svg>
+    </a>
+  </div>
+</section>
+
+  <div class="page-care__description">
+    <section class="description">
+  <div class="description__container">
+    <div class="description__column description__column--left">
+      <h2 class="description__column-title base-title">ОККЕ АВТО - каталог автохимии</h2>
+      <p class="description__column-text base-par">Линейка автокосметики и автохимии для бережного и эффективного ухода за вашим автомобилем.<br> В линейке мы собрали самые необходимые средства, которые делают профессиональный уход за<br> автомобилем доступным и функциональным. Наши продукты      помогут сохранить ваш автомобиль <br> отличном состоянии на долгие годы. Кроме того, мы постоянно работаем над улучшением и<br> расширением нашей линейки, чтобы предоставить нашим клиентам лучший выбор автокосметики<br> и автохимии на рынке. Наша цель -      обеспечить максимальную защиту, чистоту и блеск вашего<br> автомобиля, чтобы вы могли наслаждаться комфортной и безопасной ездой.<br> Профессиональный уход — это просто как раз два три, когда под рукой ОККЕ! </p>
+    </div>
+    <a class="description__column description__column--right base-link" href="#">
+      <img class="description__column-img" src="img/image/pdf.png" width="82" height="89" alt="#">
+      <span class="description__column-label">Скачать каталог</span>
+    </a>
+  </div>
+</section>
+  </div>
+
+  <div class="page-care__catalogue">
+    <section class="catalogue">
+  <div class="catalogue__container">
+    <h1 class="catalogue__title base-title">Бестселлер</h1>
+    <div class="catalogue__slider swiper">
+      <div class="catalogue__slider-wrapper swiper-wrapper">
+        <div class="catalogue__slider-slide swiper-slide">
+  <img class="catalogue__slider-slide-img" src="img/image/care-1.png" width="" height="" alt="#">
+  <div class="catalogue__slider-slide-info">
+    <h2 class="catalogue__slider-slide-title base-title">Смазка силиконовая</h2>
+    <p class="catalogue__slider-slide-text base-par">Применяется в узлах трения колесных и гусеничных транспортных средств, промышленного оборудования и в судовых механизмах различного назначения. Смазка для замков,</p>
+    <div class="catalogue__slider-slide-bottom">
+      <button class="catalogue__slider-slide-button modal-with-form__button base-button">
+        <span class="catalogue__slider-slide-button-caption">Купить</span>
+        <span class="catalogue__slider-slide-button-circle">
+          <svg class="catalogue__slider-slide-button-icon" width="13" height="12" aria-hidden="true">
+            <use href="img/icon/sprite.svg#cart-icon"></use>
+          </svg>
+        </span>
+      </button>
+      <a class="catalogue__slider-slide-link base-link" href="#">Консультация</a>
+    </div>
+  </div>
+</div>
+        <div class="catalogue__slider-slide swiper-slide">
+  <img class="catalogue__slider-slide-img" src="img/image/care-1.png" width="" height="" alt="#">
+  <div class="catalogue__slider-slide-info">
+    <h2 class="catalogue__slider-slide-title base-title">Смазка силиконовая</h2>
+    <p class="catalogue__slider-slide-text base-par">Применяется в узлах трения колесных и гусеничных транспортных средств, промышленного оборудования и в судовых механизмах различного назначения. Смазка для замков,</p>
+    <div class="catalogue__slider-slide-bottom">
+      <button class="catalogue__slider-slide-button modal-with-form__button base-button">
+        <span class="catalogue__slider-slide-button-caption">Купить</span>
+        <span class="catalogue__slider-slide-button-circle">
+          <svg class="catalogue__slider-slide-button-icon" width="13" height="12" aria-hidden="true">
+            <use href="img/icon/sprite.svg#cart-icon"></use>
+          </svg>
+        </span>
+      </button>
+      <a class="catalogue__slider-slide-link base-link" href="#">Консультация</a>
+    </div>
+  </div>
+</div>
+        <div class="catalogue__slider-slide swiper-slide">
+  <img class="catalogue__slider-slide-img" src="img/image/care-1.png" width="" height="" alt="#">
+  <div class="catalogue__slider-slide-info">
+    <h2 class="catalogue__slider-slide-title base-title">Смазка силиконовая</h2>
+    <p class="catalogue__slider-slide-text base-par">Применяется в узлах трения колесных и гусеничных транспортных средств, промышленного оборудования и в судовых механизмах различного назначения. Смазка для замков,</p>
+    <div class="catalogue__slider-slide-bottom">
+      <button class="catalogue__slider-slide-button modal-with-form__button base-button">
+        <span class="catalogue__slider-slide-button-caption">Купить</span>
+        <span class="catalogue__slider-slide-button-circle">
+          <svg class="catalogue__slider-slide-button-icon" width="13" height="12" aria-hidden="true">
+            <use href="img/icon/sprite.svg#cart-icon"></use>
+          </svg>
+        </span>
+      </button>
+      <a class="catalogue__slider-slide-link base-link" href="#">Консультация</a>
+    </div>
+  </div>
+</div>
+      </div>
+      <div class="catalogue__slider-pagination swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+  </div>
+
+  <section class="reviews">
+    <h2 class="reviews__title base-title">Отзывы</h2>
+
+    <div class="reviews__slider swiper">
+      <div class="reviews__slider-wrapper swiper-wrapper">
+        <div class="reviews__slider-slide swiper-slide" data-rating="5" data-market="Yandex">
+  <div class="reviews__slider-slide-top">
+    <span class="reviews__slider-slide-name">Владимир Я.</span>
+    <div class="reviews__slider-slide-market">
+      <img class="reviews__slider-slide-market-img" src="img/image/yamarket.png" width="19" height="19" alt="Яндекс-маркет" data-market="Yandex">
+      <img class="reviews__slider-slide-market-img" src="img/image/ozon.png" width="34" height="8" alt="Озон" data-market="Ozon">
+    </div>
+    <div class="reviews__slider-slide-stars">
+    </div>
+  </div>
+  <p class="reviews__slider-slide-text base-par">Купил для смазки дверных уплотнителей авто. Эффект - зимой (при морозе под минус 30) все нормально открывалось и закрывалось. Рекомендую</p>
+</div>
+        <div class="reviews__slider-slide swiper-slide" data-rating="5" data-market="Ozon">
+  <div class="reviews__slider-slide-top">
+    <span class="reviews__slider-slide-name">Владимир Я.</span>
+    <div class="reviews__slider-slide-market">
+      <img class="reviews__slider-slide-market-img" src="img/image/yamarket.png" width="19" height="19" alt="Яндекс-маркет" data-market="Yandex">
+      <img class="reviews__slider-slide-market-img" src="img/image/ozon.png" width="34" height="8" alt="Озон" data-market="Ozon">
+    </div>
+    <div class="reviews__slider-slide-stars">
+    </div>
+  </div>
+  <p class="reviews__slider-slide-text base-par">Купил для смазки дверных уплотнителей авто. Эффект - зимой (при морозе под минус 30) все нормально открывалось и закрывалось. Рекомендую</p>
+</div>
+        <div class="reviews__slider-slide swiper-slide" data-rating="5" data-market="Yandex">
+  <div class="reviews__slider-slide-top">
+    <span class="reviews__slider-slide-name">Владимир Я.</span>
+    <div class="reviews__slider-slide-market">
+      <img class="reviews__slider-slide-market-img" src="img/image/yamarket.png" width="19" height="19" alt="Яндекс-маркет" data-market="Yandex">
+      <img class="reviews__slider-slide-market-img" src="img/image/ozon.png" width="34" height="8" alt="Озон" data-market="Ozon">
+    </div>
+    <div class="reviews__slider-slide-stars">
+    </div>
+  </div>
+  <p class="reviews__slider-slide-text base-par">Купил для смазки дверных уплотнителей авто. Эффект - зимой (при морозе под минус 30) все нормально открывалось и закрывалось. Рекомендую</p>
+</div>
+        <div class="reviews__slider-slide swiper-slide" data-rating="5" data-market="Ozon">
+  <div class="reviews__slider-slide-top">
+    <span class="reviews__slider-slide-name">Владимир Я.</span>
+    <div class="reviews__slider-slide-market">
+      <img class="reviews__slider-slide-market-img" src="img/image/yamarket.png" width="19" height="19" alt="Яндекс-маркет" data-market="Yandex">
+      <img class="reviews__slider-slide-market-img" src="img/image/ozon.png" width="34" height="8" alt="Озон" data-market="Ozon">
+    </div>
+    <div class="reviews__slider-slide-stars">
+    </div>
+  </div>
+  <p class="reviews__slider-slide-text base-par">Купил для смазки дверных уплотнителей авто. Эффект - зимой (при морозе под минус 30) все нормально открывалось и закрывалось. Рекомендую</p>
+</div>
+        <div class="reviews__slider-slide swiper-slide" data-rating="5" data-market="Yandex">
+  <div class="reviews__slider-slide-top">
+    <span class="reviews__slider-slide-name">Владимир Я.</span>
+    <div class="reviews__slider-slide-market">
+      <img class="reviews__slider-slide-market-img" src="img/image/yamarket.png" width="19" height="19" alt="Яндекс-маркет" data-market="Yandex">
+      <img class="reviews__slider-slide-market-img" src="img/image/ozon.png" width="34" height="8" alt="Озон" data-market="Ozon">
+    </div>
+    <div class="reviews__slider-slide-stars">
+    </div>
+  </div>
+  <p class="reviews__slider-slide-text base-par">Купил для смазки дверных уплотнителей авто. Эффект - зимой (при морозе под минус 30) все нормально открывалось и закрывалось. Рекомендую</p>
+</div>
+      </div>
+      <div class="reviews__slider-pagination"></div>
+    </div>
+  </section>
+
+  <section class="contacts">
+
+  <div class="contacts__map-container">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A47957a1f41fa0683d3c29a8acc0ffa7c765575249fc3dad5a76095040814a73b&amp;source=constructor" width="100%" height="540" frameborder="0"></iframe>
+  </div>
+
+  <div class="contacts__content">
+    <h2 class="contacts__content-title base-title">Наши контакты:</h2>
+    <div class="contacts__content-middle">
+      <span class="contacts__content-subtitle">Адрес:</span>
+      <span class="contacts__content-text">Владимирская обл., г. Киржач, ул. Шелковиков, д.27А</span>
+    </div>
+    <div class="contacts__content-bottom">
+      <div class="contacts__content-bottom-item">
+        <span class="contacts__content-subtitle">Консультация:</span>
+        <a class="contacts__content-bottom-phone base-link" href="#">+7 (905) 614-33-44</a>
+        <a class="contacts__content-bottom-email base-link" href="#">partners@okke.ru</a>
+      </div>
+      <div class="contacts__content-bottom-item">
+        <span class="contacts__content-subtitle">Для опта:</span>
+        <a class="contacts__content-bottom-phone base-link" href="#">+7 (905) 614-33-44</a>
+        <a class="contacts__content-bottom-email base-link" href="#">partners@okke.ru</a>
+      </div>
+      <div class="contacts__content-bottom-item">
+        <span class="contacts__content-subtitle">Для розницы:</span>
+        <a class="contacts__content-bottom-phone base-link" href="#">+7 (905) 614-33-44</a>
+      </div>
+    </div>
+    <div class="contacts__content-socials">
+      <a class="contacts__content-socials-link base-link" href="#">
+        <img class="contacts__content-socials-img" src="img/image/socials-footer-img-1.png" width="19" height="11" alt="#">
+      </a>
+      <a class="contacts__content-socials-link base-link" href="#">
+        <img class="contacts__content-socials-img" src="img/image/socials-footer-img-2.png" width="14" height="12" alt="#">
+      </a>
+      <a class="contacts__content-socials-link base-link" href="#">
+        <img class="contacts__content-socials-img" src="img/image/socials-footer-img-3.png" width="14" height="14" alt="#">
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="page-footer">
+  <div class="page-footer__content">
+    <span class="page-footer__content-copyright">© 2023 OKKE</span>
+    <a class="page-footer__content-policy base-link" href="#">Политика конфиденциальности</a>
+    <a class="page-footer__content-link base-link" href="#">Карта сайта</a>
+    <a class="page-footer__content-isart-link base-link" target="_blank" rel="noreferrer noopener" href="https://is-art.ru/">
+      <span class="page-footer__content-isart-text">Разработано</span>
+      <svg class="page-footer__content-isart-icon" width="52" height="22" aria-hidden="true">
+        <use href="img/icon/sprite.svg#isart-icon"></use>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="js/index.min.js?v=1.0"></script>
+<script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
+
+</body>
+
+</html>
