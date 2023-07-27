@@ -10,7 +10,7 @@
   min-height: 56px;
   background-color: #1e1e1e;
 
-  padding: 0 30px;
+  padding: 0 105px;
 
   @include mixins.respond-to(notDesktop) {
     padding: 30px 5%;
@@ -76,6 +76,10 @@
   }
 
   &__content-isart-link {
+    display: flex;
+    align-items: flex-end !important;
+    gap: 13px;
+
     opacity: 0.2;
 
     transition: opacity 0.3s cubic-bezier(0.65, 0, 0.35, 1);
@@ -91,6 +95,13 @@
 
       transition: opacity 0.3s cubic-bezier(0.65, 0, 0.35, 1);
     }
+  }
+
+  &__content-isart-text {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--color-white);
   }
 
   &__content-isart-icon {

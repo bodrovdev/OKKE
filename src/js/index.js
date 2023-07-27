@@ -153,12 +153,12 @@ window.addEventListener('load', () => {
 
     let target_slides = document.querySelectorAll('.brands__slider-slide');
     target_slides.forEach(slide => {
-      let target_show_button = slide.querySelector('.brands__slider-showmore');
+      let target_show_button = slide.querySelector('.brands__slider-slide-showmore');
       let target_text_block = slide.querySelector('.brands__slider-slide-text');
 
       if (target_text_block.offsetHeight > 110) {
         target_text_block.classList.add('brands__slider-slide-text--hidden');
-        target_show_button.classList.add('brands__slider-showmore--active');
+        target_show_button.classList.add('brands__slider-slide-showmore--active');
 
         target_show_button.addEventListener('click', () => {
           target_text_block.classList.toggle('brands__slider-slide-text--hidden');
@@ -167,7 +167,6 @@ window.addEventListener('load', () => {
             target_show_button.textContent = 'Развернуть' :
             target_show_button.textContent = 'Свернуть';
         })
-
       }
     })
   }
