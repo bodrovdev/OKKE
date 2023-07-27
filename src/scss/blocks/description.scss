@@ -5,6 +5,10 @@
 
   padding: 57px 0 65px 0;
 
+  @include mixins.respond-to(notDesktop) {
+    padding: 70px 0 50px 0;
+  }
+
   &__container {
     display: flex;
     align-items: flex-end;
@@ -17,7 +21,8 @@
 
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
-      gap: 40px;
+      align-items: center;
+      gap: 30px;
 
       margin: 0 5%;
     }
@@ -34,6 +39,8 @@
       max-width: 785px;
 
       @include mixins.respond-to(notDesktop) {
+        gap: 40px;
+
         max-width: 100%;
 
         margin: 0;
@@ -66,6 +73,13 @@
     font-weight: 700;
     color: var(--color-white);
     text-transform: uppercase;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 25px;
+      line-height: 31px;
+
+      max-width: 100%;
+    }
   }
 
   &__column-text {
@@ -73,6 +87,11 @@
     font-weight: 400;
     line-height: 24px;
     color: #CBCCD2;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 
   &__column-img {

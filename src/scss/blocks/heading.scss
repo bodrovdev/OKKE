@@ -56,11 +56,11 @@
 
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
-      gap: 40px;
+      gap: 30px;
 
       width: 90%;
 
-      margin: 45px 5% 65px 5%;
+      margin: 70px 5% 50px 5%;
     }
   }
 
@@ -74,6 +74,8 @@
     max-width: 675px;
 
     @include mixins.respond-to(notDesktop) {
+      gap: 40px;
+
       max-width: 100%;
     }
   }
@@ -88,7 +90,8 @@
     text-transform: uppercase;
 
     @include mixins.respond-to(notDesktop) {
-      font-size: 18px;
+      font-size: 25px;
+      line-height: 31px;
 
       max-width: 100%;
     }
@@ -99,6 +102,11 @@
     font-weight: 500;
     line-height: 24px;
     color: var(--color-white);
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 
   &__round-link {
