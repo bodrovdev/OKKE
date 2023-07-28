@@ -1,48 +1,5 @@
 import Swiper from 'swiper/bundle';
 
-// ? Слайдер товаров в блоке каталога
-let catalogue_slider = new Swiper(".catalogue__slider", {
-  direction: "horizontal",
-
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 30,
-    },
-    768: {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-    },
-  },
-
-  pagination: {
-    el: ".catalogue__slider-pagination",
-    type: 'progressbar',
-    clickable: true,
-  },
-});
-
-// ? Слайдер отзывов в блоке отзывов
-let reviews_slider = new Swiper(".reviews__slider", {
-  direction: "horizontal",
-  spaceBetween: 30,
-
-  breakpoints: {
-    320: {
-      slidesPerView: 1
-    },
-    768: {
-      slidesPerView: "auto",
-    },
-  },
-
-  pagination: {
-    el: ".reviews__slider-pagination",
-    type: 'progressbar',
-    clickable: true,
-  },
-});
-
 // ? Слайдер на главной странице
 let index_slider = new Swiper(".brands__slider", {
   direction: "horizontal",
@@ -60,6 +17,24 @@ let index_slider = new Swiper(".brands__slider", {
     prevEl: '.brands__slider-navigation-arrow--prev',
   },
 
+});
+
+// ? Слайдер товаров в блоке каталога
+let catalogue_slider = new Swiper(".catalogue__slider", {
+  direction: "horizontal",
+  spaceBetween: 30,
+  slidesPerView: 1,
+
+  pagination: {
+    el: ".catalogue__slider-pagination",
+    type: 'progressbar',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.catalogue__slider-navigation-arrow--next',
+    prevEl: '.catalogue__slider-navigation-arrow--prev',
+  },
 });
 
 // ? Мобильный слайдер
