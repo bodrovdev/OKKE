@@ -77,6 +77,15 @@
 
       padding: 0;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      flex-direction: column;
+      gap: 30px;
+
+      border: none;
+
+      padding: 0;
+    }
   }
 
   &__slider-slide-image {
@@ -92,12 +101,22 @@
       width: 100%;
       height: 300px;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 100%;
+      height: 300px;
+    }
   }
 
   &__slider-slide-img {
     object-fit: cover;
 
     @include mixins.respond-to(notDesktop) {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
       width: 100%;
       height: auto;
     }
@@ -114,10 +133,18 @@
     @include mixins.respond-to(notDesktop) {
       gap: 30px;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      gap: 30px;
+    }
   }
 
   &__slider-slide-label {
     @include mixins.respond-to(notDesktop) {
+      display: none;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
       display: none;
     }
   }
@@ -130,6 +157,10 @@
     @include mixins.respond-to(notDesktop) {
       gap: 20px;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      gap: 20px;
+    }
   }
 
   &__slider-slide-subtitle {
@@ -140,6 +171,11 @@
     text-transform: uppercase;
 
     @include mixins.respond-to(notDesktop) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
       font-size: 18px;
       line-height: 24px;
     }
@@ -158,6 +194,11 @@
     color: #323648;
 
     @include mixins.respond-to(notDesktop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
       font-size: 18px;
       line-height: 28px;
     }

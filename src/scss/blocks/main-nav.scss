@@ -366,7 +366,7 @@
 
     width: 30vw;
     height: -webkit-fill-available;
-    background-color: #b6b6b6;
+    background-color: var(--color-white);
     box-sizing: border-box;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -407,7 +407,7 @@
 
   &__mobile-menu-image {
     width: 34px;
-    height: 38px;
+    height: auto;
   }
 
   &__mobile-menu-list {

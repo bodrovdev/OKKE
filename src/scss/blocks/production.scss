@@ -74,6 +74,12 @@
 
       margin: 0 5%;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      gap: 40px;
+
+      margin: 0 5%;
+    }
   }
 
   &__item {
@@ -94,8 +100,21 @@
       }
     }
 
+    @include mixins.respond-to(onlyDesktopS) {
+      flex-direction: column;
+      gap: 20px;
+
+      & .production__item-image {
+        order: 2;
+      }
+
+      & .production__item-info {
+        order: 1;
+      }
+    }
+
     &:nth-child(odd) {
-      @include mixins.respond-to(desktopS) {
+      @include mixins.respond-to(desktopD) {
         & .production__item-image {
           order: 2;
         }
@@ -109,6 +128,10 @@
 
   &__item-image {
     @include mixins.respond-to(notDesktop) {
+      width: 100%;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
       width: 100%;
     }
   }
@@ -127,6 +150,14 @@
       height: auto;
       object-fit: cover;
     }
+
+    @include mixins.respond-to(onlyDesktopS) {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
   }
 
   &__item-info {
@@ -135,6 +166,10 @@
     gap: 40px;
 
     @include mixins.respond-to(notDesktop) {
+      gap: 20px;
+    }
+
+    @include mixins.respond-to(onlyDesktopS) {
       gap: 20px;
     }
 
