@@ -83,8 +83,12 @@
   }
 }
 
-#index .logo-index {
-  display: block;
+#index,
+#archive,
+#feedback {
+  & .logo-index {
+    display: block;
+  }
 }
 
 #care .logo-care {
@@ -496,5 +500,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.main-nav__main-navigation {
+  &--hidden {
+    display: none;
+  }
+}
+
+.main-nav__catalogue-navigation {
+  display: none;
+
+  &--active {
+    display: flex;
   }
 }

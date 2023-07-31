@@ -120,6 +120,20 @@ window.addEventListener('load', () => {
   else {
     let round_link = document.querySelector('.round-link');
     new CircleType(round_link.querySelector('.round-text'));
+
+    // ? - Ховер для свг-изображения внутри скруглённого текста
+    let play_img = round_link.querySelector('.heading__round-img');
+    play_img.querySelector('path').classList.add('svg-default');
+    play_img.querySelector('rect').classList.add('svg-default');
+
+    round_link.addEventListener('mouseover', () => {
+      play_img.querySelector('path').classList.add('svg-default--active');
+      play_img.querySelector('rect').classList.add('svg-default--active');
+    })
+    round_link.addEventListener('mouseleave', () => {
+      play_img.querySelector('path').classList.remove('svg-default--active');
+      play_img.querySelector('rect').classList.remove('svg-default--active');
+    })
   }
 })
 
@@ -176,3 +190,11 @@ window.addEventListener('load', () => {
     })
   }
 })
+
+// ? --- Отображение варианта навигации в зависимости от страницы
+window.addEventListener('load', () => {
+  if (!(document.querySelector('#catalogue') === null)) {
+    document.querySelector('.main-nav__main-navigation').classList.add('main-nav__main-navigation--hidden');
+    document.querySelector('.main-nav__catalogue-navigation').classList.add('main-nav__catalogue-navigation--active');
+  }
+});
