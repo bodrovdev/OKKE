@@ -198,3 +198,22 @@ window.addEventListener('load', () => {
     document.querySelector('.main-nav__catalogue-navigation').classList.add('main-nav__catalogue-navigation--active');
   }
 });
+
+// ? --- Анимация графических блоков на странице новостей
+window.addEventListener('load', () => {
+  if (!(document.querySelector('.news__graphic-block-img') === null)) {
+    Array.from(document.querySelectorAll('.news__graphic-block-img')).map((item, index) => {
+      setTimeout(() => {
+        item.classList.add('news__graphic-block-img--active');
+      }, index * 300)
+    })
+  }
+})
+
+if (!(document.querySelectorAll('.news__catalogue-item') === null)) {
+  Array.from(document.querySelectorAll('.news__catalogue-item')).map((item, index) => {
+    item.setAttribute('data-aos', 'fade-up');
+    item.setAttribute('data-aos-duration', 1000);
+    item.setAttribute('data-aos-delay', index * 100);
+  })
+}
