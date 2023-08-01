@@ -43,42 +43,42 @@
           <div class="main-nav__logo-block-side">
             <ul class="main-nav__logo-nav-list main-nav__main-navigation base-list">
               <li class="main-nav__logo-nav-item">
-                <a class="main-nav__logo-nav-link hover-red base-link" href="taxonomy-category_goods.html">наши бренды</a>
+                <a class="main-nav__logo-nav-link hover-red base-link" href="index.html#brands">наши бренды</a>
               </li>
               <li class="main-nav__logo-nav-item">
-                <a class="main-nav__logo-nav-link hover-red base-link" href="#">производство</a>
+                <a class="main-nav__logo-nav-link hover-red base-link" href="index.html#production">производство</a>
               </li>
               <li class="main-nav__logo-nav-item">
                 <a class="main-nav__logo-nav-link hover-red base-link" href="archive.html">новости</a>
               </li>
               <li class="main-nav__logo-nav-item">
-                <a class="main-nav__logo-nav-link hover-red base-link" href="#">контакты</a>
+                <a class="main-nav__logo-nav-link hover-red base-link" href="#contacts">контакты</a>
               </li>
             </ul>
             <ul class="main-nav__logo-nav-list main-nav__catalogue-navigation base-list">
               <li class="main-nav__logo-nav-item">
-                <a class="main-nav__logo-nav-link hover-red base-link" href="#">каталог</a>
+                <a class="main-nav__logo-nav-link hover-red base-link" href="#description">каталог</a>
               </li>
               <li class="main-nav__logo-nav-item">
-                <a class="main-nav__logo-nav-link hover-red base-link" href="#">продукты</a>
+                <a class="main-nav__logo-nav-link hover-red base-link" href="#products">продукты</a>
               </li>
               <li class="main-nav__logo-nav-item">
-                <a class="main-nav__logo-nav-link hover-red base-link" href="#">контакты</a>
+                <a class="main-nav__logo-nav-link hover-red base-link" href="#contacts">контакты</a>
               </li>
             </ul>
-            <button class="main-nav__modal-button hover-red modal-with-form__button base-button">Обратная связь</button>
+            <a class="main-nav__modal-button hover-red modal-with-form__button base-link" href="page-contacts.html">Обратная связь</a>
           </div>
         </div>
         <div class="main-nav__burger-block">
           <ul class="main-nav__nav-list base-list">
             <li class="main-nav__nav-item">
-              <a class="main-nav__nav-link hover-red base-link" href="#">Okke Auto</a>
+              <a class="main-nav__nav-link hover-red base-link" href="taxonomy-category_goods.html">Okke Auto</a>
             </li>
             <li class="main-nav__nav-item">
-              <a class="main-nav__nav-link hover-red base-link" href="#">Okke Sani</a>
+              <a class="main-nav__nav-link hover-red base-link" href="taxonomy-category_goods.html">Okke Sani</a>
             </li>
             <li class="main-nav__nav-item">
-              <a class="main-nav__nav-link hover-red base-link" href="#">Okke Prof</a>
+              <a class="main-nav__nav-link hover-red base-link" href="taxonomy-category_goods.html">Okke Prof</a>
             </li>
           </ul>
           <button class="main-nav__burger base-button" id="burger">
@@ -94,27 +94,27 @@
         </a>
         <ul class="main-nav__mobile-menu-list main-nav__main-navigation base-list">
           <li class="main-nav__mobile-menu-item">
-            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">наши бренды</a>
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="index.html#brands">наши бренды</a>
           </li>
           <li class="main-nav__mobile-menu-item">
-            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">производство</a>
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="index.html#production">производство</a>
           </li>
           <li class="main-nav__mobile-menu-item">
             <a class="main-nav__mobile-menu-link hover-red base-link" href="archive.html">новости</a>
           </li>
           <li class="main-nav__mobile-menu-item">
-            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">контакты</a>
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="#contacts">контакты</a>
           </li>
         </ul>
         <ul class="main-nav__mobile-menu-list main-nav__catalogue-navigation base-list">
           <li class="main-nav__mobile-menu-item">
-            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">каталог</a>
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="#description">каталог</a>
           </li>
           <li class="main-nav__mobile-menu-item">
-            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">продукты</a>
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="#products">продукты</a>
           </li>
           <li class="main-nav__mobile-menu-item">
-            <a class="main-nav__mobile-menu-link hover-red base-link" href="#">контакты</a>
+            <a class="main-nav__mobile-menu-link hover-red base-link" href="#contacts">контакты</a>
           </li>
         </ul>
         <ul class="main-nav__mobile-menu-socials base-list">
@@ -139,8 +139,16 @@
         </ul>
       </div>
     </nav>
-
   </header>
+
+  <!-- <script>
+    // ? --- Ссылка на каталог главной страницы
+    window.addEventListener('load', () => {
+      if (document.getElementById('description') === null) {
+        document.querySelector("a[href='#description']").setAttribute('href', 'index.html#description');
+      }
+    })
+  </script> -->
 
 <main class="page-content" data-id="single">
   <section class="single-news">
@@ -148,16 +156,70 @@
       <img class="single-news__heading-img" src="img/image/single-news.png" alt="#">
     </figure>
     <div class="single-news__container">
-      <h2>Новое производство</h2>
-      <div style="display: flex">
-        <p>
-          Следует отметить, что глубокий уровень погружения влечет за собой процесс внедрения и модернизации распределения внутренних резервов и ресурсов. Повседневная практика показывает, что повышение уровня гражданского сознания напрямую зависит от анализа
-          существующих паттернов поведения. Однозначно, тщательные исследования конкурентов представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть описаны максимально подробно. Следует отметить, что экономическая повестка
-          сегодняшнего дня обеспечивает широкому кругу (специалистов) участие в формировании инновационных методов управления процессами. Вот вам яркий пример современных тенденций — современная методология разработки, а также свежий взгляд на привычные вещи —
-          безусловно открывает новые горизонты для кластеризации усилий. .
-        </p>
-        <img src="img/image/production-img-3.png" alt="#">
+
+      <div class="single-news__content">
+        <h2>Новое производство</h2>
+        <div>
+          <p>
+            Следует отметить, что глубокий уровень погружения влечет за собой процесс внедрения и модернизации распределения внутренних резервов и ресурсов. Повседневная практика показывает, что повышение уровня гражданского сознания напрямую зависит от
+            анализа
+            существующих паттернов поведения. Однозначно, тщательные исследования конкурентов представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть описаны максимально подробно. Следует отметить, что экономическая
+            повестка
+            сегодняшнего дня обеспечивает широкому кругу (специалистов) участие в формировании инновационных методов управления процессами. Вот вам яркий пример современных тенденций — современная методология разработки, а также свежий взгляд на привычные вещи
+            —
+            безусловно открывает новые горизонты для кластеризации усилий.
+          </p>
+          <img src="img/image/production-img-3.png" alt="#">
+        </div>
       </div>
+
+      <div class="single-news__similar">
+
+        <h2 class="single-news__similar-title base-title">другие новости</h2>
+
+        <div class="single-news__similar-wrapper">
+          <div class="news__catalogue-item">
+            <figure class="news__catalogue-item-image base-figure">
+              <img class="news__catalogue-item-img" width="371" height="264" src="img/image/news-item.png" alt="#">
+            </figure>
+            <div class="news__catalogue-item-info">
+              <span class="news__catalogue-item-date">Опубликовано 16.08.2022</span>
+              <h3 class="news__catalogue-item-title base-title">Новое производство</h3>
+              <p class="news__catalogue-item-text base-par">
+                В линейке мы собрали самые необходимые средства, которые делают профессиональный уход за интерьером и экстерьером автомобиля доступным и функциональным.
+              </p>
+              <a class="news__catalogue-item-link base-link" href="single-news.html">Узнать больше</a>
+            </div>
+          </div>
+          <div class="news__catalogue-item">
+            <figure class="news__catalogue-item-image base-figure">
+              <img class="news__catalogue-item-img" width="371" height="264" src="img/image/news-item.png" alt="#">
+            </figure>
+            <div class="news__catalogue-item-info">
+              <span class="news__catalogue-item-date">Опубликовано 16.08.2022</span>
+              <h3 class="news__catalogue-item-title base-title">Новое производство</h3>
+              <p class="news__catalogue-item-text base-par">
+                В линейке мы собрали самые необходимые средства, которые делают профессиональный уход за интерьером и экстерьером автомобиля доступным и функциональным.
+              </p>
+              <a class="news__catalogue-item-link base-link" href="single-news.html">Узнать больше</a>
+            </div>
+          </div>
+          <div class="news__catalogue-item">
+            <figure class="news__catalogue-item-image base-figure">
+              <img class="news__catalogue-item-img" width="371" height="264" src="img/image/news-item.png" alt="#">
+            </figure>
+            <div class="news__catalogue-item-info">
+              <span class="news__catalogue-item-date">Опубликовано 16.08.2022</span>
+              <h3 class="news__catalogue-item-title base-title">Новое производство</h3>
+              <p class="news__catalogue-item-text base-par">
+                В линейке мы собрали самые необходимые средства, которые делают профессиональный уход за интерьером и экстерьером автомобиля доступным и функциональным.
+              </p>
+              <a class="news__catalogue-item-link base-link" href="single-news.html">Узнать больше</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 </main>
