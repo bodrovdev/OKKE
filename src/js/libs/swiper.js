@@ -5,6 +5,20 @@ let index_slider = new Swiper(".brands__slider", {
   direction: "horizontal",
   spaceBetween: 30,
   slidesPerView: 1,
+  speed: 400,
+
+  grabCursor: true,
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      scale: 0.8,
+      translate: ["-20%", 0, -1],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
+  },
 
   pagination: {
     el: ".brands__slider-pagination",
@@ -24,6 +38,20 @@ let catalogue_slider = new Swiper(".catalogue__slider", {
   direction: "horizontal",
   spaceBetween: 30,
   slidesPerView: 1,
+  speed: 400,
+
+  grabCursor: true,
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      scale: 0.8,
+      translate: ["-20%", 0, -1],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
+  },
 
   pagination: {
     el: ".catalogue__slider-pagination",

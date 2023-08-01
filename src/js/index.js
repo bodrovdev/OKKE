@@ -217,3 +217,85 @@ if (!(document.querySelectorAll('.news__catalogue-item') === null)) {
     item.setAttribute('data-aos-delay', index * 100);
   })
 }
+
+// ? --- Анимация блока описания
+window.addEventListener('DOMContentLoaded', () => {
+  if (!(document.querySelector('.description') === null)) {
+
+    let options = {
+      threshold: 0.7,
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        document.querySelector('.description').classList.add('description--active');
+        observer.disconnect();
+      }
+    }, options);
+
+    observer.observe(document.querySelector('.description'));
+  }
+})
+
+// ? --- Анимации блока производства
+// ? - Хединг
+window.addEventListener('DOMContentLoaded', () => {
+  if (!(document.querySelector('.production__banner') === null)) {
+
+    let options = {
+      threshold: 0.7,
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        document.querySelector('.production__banner').classList.add('production__banner--active');
+        observer.disconnect();
+      }
+    }, options);
+
+    observer.observe(document.querySelector('.production__banner'));
+  }
+})
+
+// ? - Основной контент
+if (!(document.querySelector('.production__banner') === null)) {
+
+  let production_items = [];
+
+  document.querySelectorAll('.production__item-info').forEach(item => {
+    Array.from(item.children).map(value => { production_items.push(value) });
+  })
+
+  production_items.map((item, index) => {
+    item.setAttribute('data-aos', 'fade-up');
+    item.setAttribute('data-aos-duration', '1000');
+    item.setAttribute('data-aos-delay', index * 50);
+  })
+}
+
+// ? - Изображения
+window.addEventListener('DOMContentLoaded', () => {
+  if (!(document.querySelectorAll('.production__item-image') === null)) {
+
+    let options = {
+      threshold: 0.7,
+    };
+
+    document.querySelectorAll('.production__item-image').forEach(item => {
+
+      let observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          item.classList.add('production__item-image--active');
+          observer.disconnect();
+        }
+      }, options);
+
+      observer.observe(item);
+    })
+  }
+})
+
+// ? --- Отображение нужного логотипа в зависимости от страницы
+window.addEventListener('load', () => {
+  document.body.setAttribute('id', document.querySelector('main').dataset.id)
+})

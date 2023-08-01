@@ -39,6 +39,18 @@
 
   &__slider-wrapper {
     margin: 0 0 40px 0;
+
+    // & .swiper-slide {
+    //   filter: grayscale(1);
+
+    //   transition-property: transform, opacity, height, filter !important;
+    // }
+
+    // & .swiper-slide-visible {
+    //   filter: none;
+
+    //   transition-property: transform, opacity, height, filter !important;
+    // }
   }
 
   &__slider-slide {

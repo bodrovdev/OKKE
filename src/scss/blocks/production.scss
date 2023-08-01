@@ -18,6 +18,7 @@
 
     width: 100%;
     height: 413px;
+    overflow: hidden;
 
     z-index: 1;
 
@@ -30,9 +31,26 @@
       width: 100%;
       height: 100%;
       background: var(--color-black);
-      opacity: 0.3;
+      opacity: 0;
+
+      transition: opacity 1s cubic-bezier(0.65, 0, 0.35, 1);
 
       z-index: 2;
+    }
+
+    &--active {
+      &::after {
+        opacity: 0.3;
+
+        transition: opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+
+      & .production__banner-title {
+        opacity: 1;
+
+        transform: translateX(0);
+        transition: opacity 2s cubic-bezier(0.65, 0, 0.35, 1), transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+      }
     }
 
     @include mixins.respond-to(notDesktop) {
@@ -45,11 +63,17 @@
     bottom: 105px;
     left: 105px;
 
+    opacity: 0;
+
     font-size: 40px;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
     color: var(--color-white);
+
+    transform: translateX(-100%);
+    transition: opacity 1s cubic-bezier(0.65, 0, 0.35, 1), transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+    transition-delay: 0.5s;
 
     z-index: 3;
 
@@ -127,6 +151,34 @@
   }
 
   &__item-image {
+    position: relative;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-white);
+
+      transform: translateY(0);
+      transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+
+      z-index: 2;
+    }
+
+    &--active {
+      &::after {
+        transform: translateY(-100%);
+        transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+    }
+
     @include mixins.respond-to(notDesktop) {
       width: 100%;
     }
