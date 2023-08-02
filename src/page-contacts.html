@@ -1,13 +1,54 @@
 @@include('components/_base/_base-header.html')
 
 <main class="page-content" data-id="contacts">
-  <section class="contacts">
-    <figure class="contacts__heading-image base-figure">
-      <img class="contacts__hwading-img" src="img/image/contacts-heading.png" alt="#">
+  <section class="page-contacts">
+    <figure class="page-contacts__heading-image base-figure">
+      <img class="page-contacts__heading-img" src="img/image/contacts-heading.png" alt="#">
     </figure>
 
-    <div class="contacts__container">
-
+    <div class="page-contacts__container">
+      <h2 class="page-contacts__title base-title">Связаться с нами</h2>
+      <span class="page-contacts__subtitle">Выберите бренд, по которому вы хотите получить информацию</span>
+      <form class="page-contacts__form feedback_form_formset">
+        <div class="page-contacts__form-radio">
+          <label class="page-contacts__radio-label">
+            <input class="page-contacts__radio-input" type="radio" name="brands" value="Auto">
+            <div class="page-contacts__radio-graphic">
+              <svg class="page-contacts__radio-graphic-input" width="18" height="18" aria-hidden="true">
+                <use href="img/icon/sprite.svg#fake-input-icon"></use>
+              </svg>
+              <img class="page-contacts__radio-graphic-logo" src="img/image/logo-care.svg" width="79" height="95" alt="#">
+            </div>
+          </label>
+          <label class="page-contacts__radio-label">
+            <input class="page-contacts__radio-input" type="radio" name="brands" value="Prof">
+            <div class="page-contacts__radio-graphic">
+              <svg class="page-contacts__radio-graphic-input" width="18" height="18" aria-hidden="true">
+                <use href="img/icon/sprite.svg#fake-input-icon"></use>
+              </svg>
+              <img class="page-contacts__radio-graphic-logo" src="img/image/logo-prof.svg" width="79" height="97" alt="#">
+            </div>
+          </label>
+          <label class="page-contacts__radio-label">
+            <input class="page-contacts__radio-input" type="radio" name="brands" value="Sani">
+            <div class="page-contacts__radio-graphic">
+              <svg class="page-contacts__radio-graphic-input" width="18" height="18" aria-hidden="true">
+                <use href="img/icon/sprite.svg#fake-input-icon"></use>
+              </svg>
+              <img class="page-contacts__radio-graphic-logo" src="img/image/logo-chemical.svg" width="79" height="95" alt="#">
+            </div>
+          </label>
+          <label class="page-contacts__radio-label">
+            <input class="page-contacts__radio-input" type="radio" name="brands" value="Home">
+            <div class="page-contacts__radio-graphic">
+              <svg class="page-contacts__radio-graphic-input" width="18" height="18" aria-hidden="true">
+                <use href="img/icon/sprite.svg#fake-input-icon"></use>
+              </svg>
+              <img class="page-contacts__radio-graphic-logo" src="img/image/logo-index2.png" width="79" height="95" alt="#">
+            </div>
+          </label>
+        </div>
+      </form>
     </div>
   </section>
 </main>

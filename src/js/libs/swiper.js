@@ -6,9 +6,17 @@ let index_slider = new Swiper(".brands__slider", {
   spaceBetween: 30,
   slidesPerView: 1,
   speed: 400,
-
   grabCursor: true,
-  effect: "creative",
+
+  breakpoints: {
+    320: {
+      effect: "creative",
+    },
+    768: {
+      effect: "slide",
+    },
+  },
+
   creativeEffect: {
     prev: {
       shadow: true,
@@ -39,9 +47,17 @@ let catalogue_slider = new Swiper(".catalogue__slider", {
   spaceBetween: 30,
   slidesPerView: 1,
   speed: 400,
-
   grabCursor: true,
-  effect: "creative",
+
+  breakpoints: {
+    320: {
+      effect: "creative",
+    },
+    768: {
+      effect: "slide",
+    },
+  },
+
   creativeEffect: {
     prev: {
       shadow: true,

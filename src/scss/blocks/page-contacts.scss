@@ -1,0 +1,45 @@
+@use "../mixins";
+
+.page-contacts {
+  margin: 110px 0 0 0;
+
+  @include mixins.respond-to(notDesktop) {
+    margin: 70px 0 50px 0;
+  }
+
+  &__container {
+    margin: 0 105px;
+
+    @include mixins.respond-to(notDesktop) {
+      margin: 0 5%;
+    }
+  }
+
+  &__heading-image {
+    margin: 0 0 60px 0;
+
+    @include mixins.respond-to(notDesktop) {
+      margin: 0;
+    }
+  }
+
+  &__heading-img {
+    width: 100%;
+    height: auto;
+    max-height: 193px;
+    object-fit: cover;
+
+    @include mixins.respond-to(notDesktop) {
+      min-height: 150px;
+    }
+  }
+
+  &__form {}
+
+  &__form-radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+}
