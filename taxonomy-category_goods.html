@@ -16,7 +16,7 @@
 
 <body style="opacity: 0">
 
-  <div class="modal-with-form" id="modal_with_form">
+  <!-- <div class="modal-with-form" id="modal_with_form">
     <div class="modal-with-form__wrapper">
       <button class="modal-with-form__close follow-change base-button" id="modal_with_form_close">
         <svg class="modal-with-form__close-icon" width="20" height="20" alt="#">
@@ -26,6 +26,19 @@
       <div class="modal-with-form__inner"></div>
       <div class="modal-with-form__success">
         <span class="modal-with-form__success-text">Спасибо, ваша заявка отправлена!</span>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="modal-without-form" id="modal_without_form">
+    <div class="modal-without-form__wrapper">
+      <button class="modal-without-form__close follow-change base-button" id="modal_without_form_close">
+        <svg class="modal-without-form__close-icon" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-without-form__success">
+        <span class="modal-without-form__success-text">Спасибо, ваша заявка отправлена!</span>
       </div>
     </div>
   </div>
@@ -140,15 +153,6 @@
       </div>
     </nav>
   </header>
-
-  <!-- <script>
-    // ? --- Ссылка на каталог главной страницы
-    window.addEventListener('load', () => {
-      if (document.getElementById('description') === null) {
-        document.querySelector("a[href='#description']").setAttribute('href', 'index.html#description');
-      }
-    })
-  </script> -->
 
 <main class="page-content" id="catalogue" data-id="care">
 
