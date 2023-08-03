@@ -36,21 +36,35 @@ document.addEventListener('click', (e) => {
 
 });
 
-// ? --- Модалка с формой
+// ? --- Модалки
 window.addEventListener('load', () => {
   if (!(document.querySelector('#modal_with_form') === null) || !(document.querySelector('#modal_without_form') === null)) {
 
-    //     let modal_with_form = document.getElementById('modal-with-form');
-    //     let modal_with_form_close = document.getElementById('modal-with-form-close');
-    //     let modal_with_form_buttons = document.querySelectorAll('.page-button');
-    //     let modal_with_form_formset = document.getElementById('modal_with_form_formset');
+    // let modal_with_form = document.getElementById('modal-with-form');
+    // let modal_with_form_close = document.getElementById('modal-with-form-close');
+    // let modal_with_form_buttons = document.querySelectorAll('.page-button');
+    // let modal_with_form_formset = document.getElementById('modal_with_form_formset');
 
-    // let modal_without_form_formset = document.querySelector('.modal_without_form_formset');
+    let modal_without_form = document.getElementById('modal_without_form');
+    let modal_without_form_formset = document.querySelector('.modal-without-form-formset');
 
-    //     function closeFormModal() {
-    //       modal_with_form.classList.remove('modal-form--active');
-    //       unlock(modal_with_form);
-    //     }
+    // ? - Варианты закрытия модалки
+    function modalClosing(modal_class) {
+      window.addEventListener('click', (e) => {
+        if (e.target === document.querySelector(`${modal_class}__close`)) {
+          closeFormModal(modal_class);
+        }
+        else if (e.target !== e.currentTarget) {
+          closeFormModal(modal_class);
+        }
+      })
+    }
+
+    // ? - Закрытие модалки
+    function closeFormModal(modal_class) {
+      document.querySelector(`.${modal_class}`).classList.remove(`${modal_class}--active`);
+      enableBodyScroll(modal_class);
+    }
 
     // ? - Открытие модалки на нажатие кнопки
     // modal_with_form_buttons.forEach((button) => {
@@ -58,18 +72,6 @@ window.addEventListener('load', () => {
     //     modal_with_form.classList.add('modal-form--active');
     //     lock(modal_with_form);
     //   })
-    // })
-
-    // ? - Варианты закрытия модалки
-    // window.addEventListener('click', (e) => {
-    //   switch (e) {
-    //     case (e.target === modal_with_form_close):
-    //       closeFormModal();
-    //       break;
-    //     case (e.target !== e.currentTarget):
-    //       closeFormModal();
-    //       break;
-    //   }
     // })
 
     // ? - Подтверждение отправки модалки
@@ -80,11 +82,13 @@ window.addEventListener('load', () => {
     // })
 
     // ? - Открытие модалки с подтверждением отправки формы
-    // modal_without_form_formset.addEventListener('submit', (e) => {
-    //   e.preventDefault();
-    //   document.querySelector('.modal-form__inner').classList.add('modal-form__inner--hidden');
-    //   document.querySelector('.modal-form__success').classList.add('modal-form__success--active');
-    // })
+    modal_without_form_formset.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modal_without_form.classList.add('modal-without-form--active');
+      disableBodyScroll(modal_without_form);
+
+      modalClosing(`modal-without-form`);
+    })
   }
 })
 
@@ -307,4 +311,18 @@ window.addEventListener('DOMContentLoaded', () => {
 // ? --- Отображение нужного логотипа в зависимости от страницы
 window.addEventListener('load', () => {
   document.body.setAttribute('id', document.querySelector('main').dataset.id)
+})
+
+// ? --- Передача значения выбранного радио-баттона в результирующий инпут на странице с формой обратной связи
+window.addEventListener('load', () => {
+  if (!(document.querySelector('.page-contacts__radio-brands-input-result') === null)) {
+    let brand_inputs = document.querySelectorAll('.page-contacts__radio-input');
+    let result_input = document.querySelector('.page-contacts__radio-brands-input-result');
+
+    brand_inputs.forEach(input => {
+      input.addEventListener('click', () => {
+        result_input.value = input.value;
+      })
+    })
+  }
 })
