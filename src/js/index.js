@@ -88,6 +88,10 @@ window.addEventListener('load', () => {
       disableBodyScroll(modal_without_form);
 
       modalClosing(`modal-without-form`);
+
+      document.querySelector('.page-contacts__form-body-formset').querySelectorAll('input, textarea').forEach(item => {
+        item.value = '';
+      })
     })
   }
 })
@@ -323,6 +327,19 @@ window.addEventListener('load', () => {
       input.addEventListener('click', () => {
         result_input.value = input.value;
       })
+    })
+  }
+})
+
+// ? --- Переход на главную, если на странице отсутствуют контакты
+window.addEventListener('load', () => {
+  if (document.querySelector('#our_contacts') === null) {
+
+    console.log('oluh');
+
+    let homepage = document.querySelector('.homepage').dataset.homepage;
+    document.querySelectorAll('a[href="#our_contacts"').forEach(link => {
+      link.setAttribute('href', `${homepage}#our_contacts`);
     })
   }
 })
