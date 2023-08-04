@@ -104,7 +104,6 @@ window.addEventListener('load', () => {
   }
 });
 
-
 // ? --- Отключение подсветки ошибок в инпутах
 window.addEventListener('load', () => {
   if (!(document.querySelectorAll('input') === null)) {
@@ -248,8 +247,6 @@ if (!(document.querySelectorAll('.news__catalogue-item') === null)) {
 window.addEventListener('DOMContentLoaded', () => {
   if (!(document.querySelector('.description') === null)) {
 
-    console.log('oluh');
-
     let options = {
       threshold: 0.5,
     };
@@ -342,15 +339,17 @@ window.addEventListener('load', () => {
   }
 })
 
-// ? --- Переход на главную, если на странице отсутствуют контакты
+// ? --- Переход на главную, если элемент для якорной ссылки отсутствует на странице
 window.addEventListener('load', () => {
-  if (document.querySelector('#our_contacts') === null) {
+  let allLinks = document.querySelectorAll('a');
+  Array.from(allLinks).map(item => {
 
-    console.log('oluh');
+    let hrefTarget = item.href.split('#')[1];
 
-    let homepage = document.querySelector('.homepage').dataset.homepage;
-    document.querySelectorAll('a[href="#our_contacts"').forEach(link => {
-      link.setAttribute('href', `${homepage}#our_contacts`);
-    })
-  }
+    if (item.href.includes('#') && hrefTarget.length > 0) {
+      if (document.getElementById(hrefTarget) === null) {
+        item.setAttribute('href', `${window.location.origin}#${hrefTarget}`);
+      }
+    }
+  })
 })
