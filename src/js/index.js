@@ -36,35 +36,33 @@ document.addEventListener('click', (e) => {
 
 });
 
-// ? --- Модалки
+// ? --- Для модалок
+// ? - Варианты закрытия модалки
+function modalClosing(modal_class) {
+  window.addEventListener('click', (e) => {
+    if (e.target === document.querySelector(`${modal_class}__close`)) {
+      closeFormModal(modal_class);
+    }
+    else if (e.target !== e.currentTarget) {
+      closeFormModal(modal_class);
+    }
+  })
+}
+
+// ? - Закрытие модалки
+function closeFormModal(modal_class) {
+  document.querySelector(`.${modal_class}`).classList.remove(`${modal_class}--active`);
+  enableBodyScroll(modal_class);
+}
+
+// ? --- Модалка с формой
 window.addEventListener('load', () => {
-  if (!(document.querySelector('#modal_with_form') === null) || !(document.querySelector('#modal_without_form') === null)) {
+  if (!(document.querySelector('#modal_with_form') === null)) {
 
     // let modal_with_form = document.getElementById('modal-with-form');
     // let modal_with_form_close = document.getElementById('modal-with-form-close');
     // let modal_with_form_buttons = document.querySelectorAll('.page-button');
     // let modal_with_form_formset = document.getElementById('modal_with_form_formset');
-
-    let modal_without_form = document.getElementById('modal_without_form');
-    let modal_without_form_formset = document.querySelector('.modal-without-form-formset');
-
-    // ? - Варианты закрытия модалки
-    function modalClosing(modal_class) {
-      window.addEventListener('click', (e) => {
-        if (e.target === document.querySelector(`${modal_class}__close`)) {
-          closeFormModal(modal_class);
-        }
-        else if (e.target !== e.currentTarget) {
-          closeFormModal(modal_class);
-        }
-      })
-    }
-
-    // ? - Закрытие модалки
-    function closeFormModal(modal_class) {
-      document.querySelector(`.${modal_class}`).classList.remove(`${modal_class}--active`);
-      enableBodyScroll(modal_class);
-    }
 
     // ? - Открытие модалки на нажатие кнопки
     // modal_with_form_buttons.forEach((button) => {
@@ -80,6 +78,16 @@ window.addEventListener('load', () => {
     //   document.querySelector('.modal-form__inner').classList.add('modal-form__inner--hidden');
     //   document.querySelector('.modal-form__success').classList.add('modal-form__success--active');
     // })
+  }
+})
+
+// ? --- Модалка без формы
+window.addEventListener('load', () => {
+  if (!(document.querySelector('#modal_without_form') === null) &&
+    !(document.querySelector('.modal-without-form__formset') === null)) {
+
+    let modal_without_form = document.getElementById('modal_without_form');
+    let modal_without_form_formset = document.querySelector('.modal-without-form__formset');
 
     // ? - Открытие модалки с подтверждением отправки формы
     modal_without_form_formset.addEventListener('submit', (e) => {
@@ -94,7 +102,8 @@ window.addEventListener('load', () => {
       })
     })
   }
-})
+});
+
 
 // ? --- Отключение подсветки ошибок в инпутах
 window.addEventListener('load', () => {
@@ -239,8 +248,10 @@ if (!(document.querySelectorAll('.news__catalogue-item') === null)) {
 window.addEventListener('DOMContentLoaded', () => {
   if (!(document.querySelector('.description') === null)) {
 
+    console.log('oluh');
+
     let options = {
-      threshold: 0.7,
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(entries => {

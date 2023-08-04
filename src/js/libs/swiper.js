@@ -8,26 +8,6 @@ let index_slider = new Swiper(".brands__slider", {
   speed: 400,
   grabCursor: true,
 
-  breakpoints: {
-    320: {
-      effect: "creative",
-    },
-    768: {
-      effect: "slide",
-    },
-  },
-
-  creativeEffect: {
-    prev: {
-      shadow: true,
-      scale: 0.8,
-      translate: ["-20%", 0, -1],
-    },
-    next: {
-      translate: ["100%", 0, 0],
-    },
-  },
-
   pagination: {
     el: ".brands__slider-pagination",
     type: 'progressbar',
@@ -48,26 +28,6 @@ let catalogue_slider = new Swiper(".catalogue__slider", {
   slidesPerView: 1,
   speed: 400,
   grabCursor: true,
-
-  breakpoints: {
-    320: {
-      effect: "creative",
-    },
-    768: {
-      effect: "slide",
-    },
-  },
-
-  creativeEffect: {
-    prev: {
-      shadow: true,
-      scale: 0.8,
-      translate: ["-20%", 0, -1],
-    },
-    next: {
-      translate: ["100%", 0, 0],
-    },
-  },
 
   pagination: {
     el: ".catalogue__slider-pagination",

@@ -83,8 +83,9 @@
       gap: 30px;
 
       border: none;
+      border: 1px solid #EFEEEE;
 
-      padding: 0;
+      padding: 20px;
     }
 
     @include mixins.respond-to(onlyDesktopS) {
