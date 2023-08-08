@@ -123,6 +123,11 @@
   }
 
   &__catalogue-item-info {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
     padding: 26px 20px 81px 16px;
 
     @include mixins.respond-to(notDesktop) {

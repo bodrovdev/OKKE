@@ -471,13 +471,11 @@
     gap: 60px;
 
     @include mixins.respond-to(notDesktop) {
-      flex-direction: column;
       align-items: flex-start;
       gap: 40px;
     }
 
     @include mixins.respond-to(onlyDesktopS) {
-      flex-direction: column;
       align-items: flex-start;
       gap: 40px;
     }
