@@ -113,29 +113,22 @@ window.addEventListener('load', () => {
   }
 })
 
-// ? --- Анимация фона элементов на главной странице
+// ? --- Фон элементов на главной странице
 window.addEventListener('load', () => {
-  if (!(document.querySelectorAll('.index-content__item') === null)) {
+  let brand_items = document.querySelectorAll('.brands__slider-slide');
 
-    window.innerWidth >= 1024 ?
-      (function () {
-        document.querySelectorAll('.index-content__item').forEach((item) => {
-          item.addEventListener('mouseover', () => {
-            item.classList.remove('index-content__item--bg-hidden');
-          })
-          item.addEventListener('mouseleave', () => {
-            item.classList.add('index-content__item--bg-hidden');
-          })
-        })
-      }()) :
-
-      Array.from(document.querySelectorAll('.index-content__item')).map((item, index) => {
-        setTimeout(() => {
-          item.classList.remove('index-content__item--bg-hidden');
-        }, index * 900);
-      })
+  if (brand_items === null) {
+    return;
   }
-});
+  else {
+    brand_items.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        brand_items.forEach(item_value => { item_value.classList.remove('brands__slider-slide--active') });
+        item.classList.add('brands__slider-slide--active')
+      })
+    })
+  }
+})
 
 // ? --- Скругление текста вокруг ссылки
 window.addEventListener('load', () => {
@@ -192,29 +185,29 @@ window.addEventListener('load', () => {
 })
 
 // ? --- Кнопка "показать ещё" на главной странице
-window.addEventListener('load', () => {
-  if (!(document.querySelector('.brands__slider-slide') === null)) {
+// window.addEventListener('load', () => {
+//   if (!(document.querySelector('.brands__slider-slide') === null)) {
 
-    let target_slides = document.querySelectorAll('.brands__slider-slide');
-    target_slides.forEach(slide => {
-      let target_show_button = slide.querySelector('.brands__slider-slide-showmore');
-      let target_text_block = slide.querySelector('.brands__slider-slide-text');
+//     let target_slides = document.querySelectorAll('.brands__slider-slide');
+//     target_slides.forEach(slide => {
+//       let target_show_button = slide.querySelector('.brands__slider-slide-showmore');
+//       let target_text_block = slide.querySelector('.brands__slider-slide-text');
 
-      if (target_text_block.offsetHeight > 110) {
-        target_text_block.classList.add('brands__slider-slide-text--hidden');
-        target_show_button.classList.add('brands__slider-slide-showmore--active');
+//       if (target_text_block.offsetHeight > 110) {
+//         target_text_block.classList.add('brands__slider-slide-text--hidden');
+//         target_show_button.classList.add('brands__slider-slide-showmore--active');
 
-        target_show_button.addEventListener('click', () => {
-          target_text_block.classList.toggle('brands__slider-slide-text--hidden');
+//         target_show_button.addEventListener('click', () => {
+//           target_text_block.classList.toggle('brands__slider-slide-text--hidden');
 
-          target_text_block.classList.contains('brands__slider-slide-text--hidden') ?
-            target_show_button.textContent = 'Развернуть' :
-            target_show_button.textContent = 'Свернуть';
-        })
-      }
-    })
-  }
-})
+//           target_text_block.classList.contains('brands__slider-slide-text--hidden') ?
+//             target_show_button.textContent = 'Развернуть' :
+//             target_show_button.textContent = 'Свернуть';
+//         })
+//       }
+//     })
+//   }
+// })
 
 // ? --- Отображение варианта навигации в зависимости от страницы
 window.addEventListener('load', () => {

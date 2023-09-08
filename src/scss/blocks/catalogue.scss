@@ -100,7 +100,7 @@
 
   &__slider-slide-img {
     width: 321px;
-    height: 544px;
+    // height: 544px;
     object-fit: cover;
 
     @include mixins.respond-to(mobileOnly) {
