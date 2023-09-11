@@ -1,6 +1,18 @@
 @@include('components/_base/_base-header.html')
 
 <main class="page-content" data-id="single">
+
+  @@include('components/_bem/_bread.html', {
+  "current_link": "archive.html",
+  "current_text": "Новости",
+
+  "current_link_2": "single.html",
+  "current_text_2": "Новое производство",
+
+  "current_link_3": "",
+  "current_text_3": "",
+  })
+
   <section class="single-news">
     <figure class="single-news__heading-image base-figure">
       <img class="single-news__heading-img" src="img/image/single-news.png" alt="#">
@@ -73,5 +85,7 @@
     </div>
   </section>
 </main>
+
+@@include('components/_bem/_fake-footer.html')
 
 @@include('components/_base/_base-footer.html')

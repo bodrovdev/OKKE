@@ -1,0 +1,87 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content" data-id="single">
+
+  @@include('components/_bem/_bread.html', {
+  "current_link": "taxonomy-category__goods.html",
+  "current_text": "Okke auto",
+
+  "current_link_2": "single-goods.html",
+  "current_text_2": "Графитная смазка",
+
+  "current_link_3": "",
+  "current_text_3": "",
+  })
+
+  <section class="single-goods">
+    <div class="single-goods__container">
+      <div class="single-goods__column single-goods__column--left">
+        <div class="single-goods__video-container">
+          <video class="single-goods__video" src="https://www.shutterstock.com/shutterstock/videos/1091910713/preview/stock-footage-dubai-uae-rolling-shot-of-lamborghini-urus-suv-car-driving-at-night-in-dubai-uae-city.webm" autoplay muted loop></video>
+          <a class="single-goods__video-link base-link" href="https://www.shutterstock.com/shutterstock/videos/1091910713/preview/stock-footage-dubai-uae-rolling-shot-of-lamborghini-urus-suv-car-driving-at-night-in-dubai-uae-city.webm" data-fancybox>Смотреть
+            со звуом</a>
+        </div>
+
+        <div class="single-goods__spread-container">
+          <h3 class="single-goods__spread-title base-title">Детали</h3>
+          <div class="single-goods__spread-wrapper">
+            <div class="single-goods__spread-item">
+              <div class="single-goods__spread-item-top">
+                <span class="single-goods__spread-item-name">Рекомендации по использованию:</span>
+                <span class="single-goods__spread-item-cross"></span>
+              </div>
+              <p class="single-goods__spread-item-content base-par">
+                Хорошо встряхнуть баллон в течение 30 секунд. Нанести смазку тонким слоем на обрабатываемые детали. Для достижения наилучших результатов, применять при температуре окружающей среды не ниже +10°С.
+              </p>
+            </div>
+            <div class="single-goods__spread-item">
+              <div class="single-goods__spread-item-top">
+                <span class="single-goods__spread-item-name">Меры предосторожности:</span>
+                <span class="single-goods__spread-item-cross"></span>
+              </div>
+              <p class="single-goods__spread-item-content base-par">
+                Огнеопасно! Баллон под давлением! Предохранять от воздействия прямых солнечных лучей и нагревания выше +50 °С. Не распылять вблизи открытого огня и раскаленных предметов. Использовать по назначению. Не допускать попадания в глаза. В случае
+                попадания, промыть водой. Не разбирать, беречь от детей.
+              </p>
+            </div>
+            <div class="single-goods__spread-item">
+              <div class="single-goods__spread-item-top">
+                <span class="single-goods__spread-item-name">Условия хранения и транспортировки:</span>
+                <span class="single-goods__spread-item-cross"></span>
+              </div>
+              <p class="single-goods__spread-item-content base-par">
+                Хранить в сухом хорошо вентилируемом помещении при температуре от -10 до + 25°С. Беречь от нагрева. По окончании срока годности утилизировать как бытовые отходы.
+              </p>
+            </div>
+            <div class="single-goods__spread-item">
+              <div class="single-goods__spread-item-top">
+                <span class="single-goods__spread-item-name">Состав и срок годности:</span>
+                <span class="single-goods__spread-item-cross"></span>
+              </div>
+              <p class="single-goods__spread-item-content base-par">
+                СОСТАВ: графитовая смазка >30%, нефрас > 30%, углеводородный пропеллент >30% .
+                Срок годности: 36 месяцев.
+                Дату выпуска смотри на упаковке.
+                Массу нетто смотри на упаковке.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-goods__column single-goods__column--right">
+        <figure class="single-goods__column-image base-figure">
+          <img class="single-goods__column-img" src="img/image/single-brand.png" width="250" height="420" alt="#">
+        </figure>
+        <h2 class="single-goods__column-title base-title">Графитная смазка</h2>
+        <p class="single-goods__column-text base-par">
+          Предназначена для смазывания открытых цепных и шестеренчатых передач, резьбовых соединений, тросов, ходовых винтов, домкратов, рессор, петель ворот гаражей, для защиты клемм аккумуляторов. Незаменима как для ухода за автомобилем, так и для
+          разнообразного промышленного и бытового применения. Обладает высокой антифрикционной эффективностью, химической стойкостью, механической стабильностью. Надежно защищает металлические поверхности от коррозии.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+@@include('components/_bem/_fake-footer.html')
+
+@@include('components/_base/_base-footer.html')

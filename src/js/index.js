@@ -236,6 +236,17 @@ if (!(document.querySelectorAll('.news__catalogue-item') === null)) {
   })
 }
 
+// ? --- Анимация графических блоков на странице каталога товаров
+// window.addEventListener('load', () => {
+//   if (!(document.querySelectorAll('.catalogue__wrapper-item') === null)) {
+//     Array.from(document.querySelectorAll('.catalogue__wrapper-item')).map((item, index) => {
+//       item.setAttribute('data-aos', 'fade-up');
+//       item.setAttribute('data-aos-duration', 1000);
+//       item.setAttribute('data-aos-delay', index * 100);
+//     })
+//   }
+// });
+
 // ? --- Анимация блока описания
 window.addEventListener('DOMContentLoaded', () => {
   if (!(document.querySelector('.description') === null)) {
@@ -345,4 +356,28 @@ window.addEventListener('load', () => {
       }
     }
   })
+})
+
+// ? --- Раскрывающийся блок на странице товара
+window.addEventListener('load', () => {
+  let spread_items = document.querySelectorAll('.single-goods__spread-item');
+  if (spread_items === null) {
+    return;
+  }
+  else {
+    spread_items.forEach(item => {
+      let item_content = item.querySelector('.single-goods__spread-item-content');
+
+      item.addEventListener('click', () => {
+        if (item.classList.contains('single-goods__spread-item--active')) {
+          item.classList.remove('single-goods__spread-item--active');
+          item.setAttribute('style', '');
+        }
+        else {
+          item.classList.add('single-goods__spread-item--active');
+          item.setAttribute(`style`, `height:${item_content.offsetHeight + 46}px; transition:height 0.3s;`);
+        }
+      })
+    })
+  }
 })

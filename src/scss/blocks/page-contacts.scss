@@ -1,7 +1,7 @@
 @use "../mixins";
 
 .page-contacts {
-  margin: 110px 0 0 0;
+  margin: 10px 0 0 0;
 
   @include mixins.respond-to(notDesktop) {
     margin: 70px 0 50px 0;

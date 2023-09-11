@@ -1,14 +1,25 @@
 @@include('components/_base/_base-header.html')
 
 <main class="page-content" data-id="archive">
+
+  @@include('components/_bem/_bread.html', {
+  "current_link": "archive.html",
+  "current_text": "Новости",
+
+  "current_link_2": "",
+  "current_text_2": "",
+
+  "current_link_3": "",
+  "current_text_3": "",
+  })
+
   <section class="news">
     <div class="news__container">
       <div class="news__graphic-block">
-        <img class="news__graphic-block-img" width="114px" src="img/image/logo-index2.png" alt="" aria-hidden="true">
-        <img class="news__graphic-block-img" width="114px" src="img/image/logo-care.svg" alt="" aria-hidden="true">
-        <img class="news__graphic-block-img" width="114px" src="img/image/logo-prof.svg" alt="" aria-hidden="true">
-        <img class="news__graphic-block-img" width="114px" src="img/image/logo-chemical.svg" alt="" aria-hidden="true">
-
+        <img class="news__graphic-block-img" width="114px" src="img/image/logo-index2.png" aria-hidden="true">
+        <img class="news__graphic-block-img" width="114px" src="img/image/logo-care.svg" aria-hidden="true">
+        <img class="news__graphic-block-img" width="114px" src="img/image/logo-prof.svg" aria-hidden="true">
+        <img class="news__graphic-block-img" width="114px" src="img/image/logo-chemical.svg" aria-hidden="true">
       </div>
       <!-- <figure class="news__graphic-image base-figure">
         <img class="news__graphic-img" width="1170" height="193" src="img/image/news-graphic.png" alt="#" aria-hidden="true">
@@ -125,5 +136,7 @@
     </div>
   </section>
 </main>
+
+@@include('components/_bem/_fake-footer.html')
 
 @@include('components/_base/_base-footer.html')

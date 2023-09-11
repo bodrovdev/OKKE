@@ -1,6 +1,18 @@
 @@include('components/_base/_base-header.html')
 
 <main class="page-content" data-id="contacts">
+
+  @@include('components/_bem/_bread.html', {
+  "current_link": "page-contacts.html",
+  "current_text": "Контакты",
+
+  "current_link_2": "",
+  "current_text_2": "",
+
+  "current_link_3": "",
+  "current_text_3": "",
+  })
+
   <section class="page-contacts">
     <figure class="page-contacts__heading-image base-figure">
       <img class="page-contacts__heading-img" src="img/image/contacts-heading.png" alt="#">
@@ -72,5 +84,7 @@
     </div>
   </section>
 </main>
+
+@@include('components/_bem/_fake-footer.html')
 
 @@include('components/_base/_base-footer.html')

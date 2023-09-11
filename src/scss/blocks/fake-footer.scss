@@ -1,0 +1,122 @@
+@use "../mixins";
+
+.fake-footer {
+  background-color: #1E1E1E;
+
+  padding: 40px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+
+    padding: 0 105px;
+
+    @include mixins.respond-to(notDesktop) {
+      flex-direction: column;
+
+      width: 90%;
+
+      padding: 0;
+      margin: 0 5%;
+    }
+  }
+
+  &__logo {
+    position: relative;
+
+    display: flex;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 150px;
+      height: 150px;
+      background-color: var(--color-brick-red);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+
+      z-index: -1;
+    }
+
+    &:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+  }
+
+  &__partials {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 60px;
+
+    width: 100%;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 30px;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-wrap: wrap;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      gap: 16px;
+
+      &-item {
+        display: flex;
+
+        &:first-of-type {
+
+          margin: 0 0 8px 0;
+
+          & .fake-footer__partials-list-link {
+            font-size: 16px;
+            font-weight: 600;
+            // line-height: 24px;
+            color: #FFF;
+
+            transition: color 0.2s;
+
+            &:hover {
+              color: var(--color-brick-red);
+
+              transition: color 0.2s;
+            }
+          }
+        }
+      }
+
+      &-link {
+        font-size: 14px;
+        font-weight: 500;
+        // line-height: 24px;
+
+        color: #92949B;
+
+        transition: color 0.2s;
+
+        &:hover {
+          color: var(--color-brick-red);
+
+          transition: color 0.2s;
+        }
+      }
+    }
+  }
+}
