@@ -192,6 +192,7 @@
       align-items: flex-start;
       justify-content: flex-start;
 
+      width: 100%;
       height: 46px;
       overflow: hidden;
       cursor: pointer;
@@ -229,20 +230,6 @@
         color: #323648;
 
         user-select: none;
-      }
-
-      @media (min-width:320px) and (max-width:389px) {
-        &-name {
-          font-size: 11px;
-          line-height: 15px;
-        }
-      }
-
-      @media (min-width:390px) and (max-width:1023px) {
-        &-name {
-          font-size: 14px;
-          line-height: 18px;
-        }
       }
 
       &-cross {
@@ -293,6 +280,30 @@
         color: #62646B;
 
         padding: 20px 0 0 0;
+      }
+
+      @media (min-width:320px) and (max-width:389px) {
+        &-name {
+          font-size: 11px;
+          line-height: 15px;
+        }
+
+        &-content {
+          font-size: 11px;
+          line-height: 15px;
+        }
+      }
+
+      @media (min-width:390px) and (max-width:1023px) {
+        &-name {
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        &-content {
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
     }
   }

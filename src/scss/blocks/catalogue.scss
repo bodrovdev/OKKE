@@ -466,7 +466,7 @@
 
   &__wrapper {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template: repeat(2, auto) / repeat(3, 1fr);
     gap: 30px;
     align-content: start;
     justify-content: start;
@@ -506,7 +506,7 @@
     }
 
     &-img {
-      object-fit: contain;
+      object-fit: contain !important;
     }
 
     &-title {
