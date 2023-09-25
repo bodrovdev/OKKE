@@ -1,7 +1,7 @@
 @use "../mixins";
 
 .catalogue {
-  padding: 60px 0 50px 0;
+  padding: 57px 0 50px 0;
 
   @include mixins.respond-to(notDesktop) {
     padding: 70px 0 50px;
@@ -15,7 +15,7 @@
     text-transform: uppercase;
     color: #323648;
 
-    margin: 0 0 50px 100px;
+    margin: 0 0 29px 100px;
 
     @include mixins.respond-to(notDesktop) {
       font-size: 25px;
@@ -67,8 +67,8 @@
 
   &__slider-slide-container {
     display: flex;
-    align-items: center;
-    gap: 46px;
+    align-items: flex-start;
+    gap: 42px;
     flex-grow: 1;
 
     width: 100%;
@@ -76,7 +76,7 @@
     background-color: #ffffff;
     border: 4px solid #EFEEEE;
 
-    padding: 46px 60px 54px 33px;
+    padding: 46px 60px 46px 33px;
 
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
@@ -96,6 +96,10 @@
 
       padding: 0;
     }
+  }
+
+  &__slider-slide-image {
+    display: flex;
   }
 
   &__slider-slide-img {
@@ -129,6 +133,8 @@
     display: flex;
     flex-direction: column;
 
+    padding: 54px 0 0 0;
+
     @include mixins.respond-to(notDesktop) {
       & .catalogue__slider-slide-info {
         order: 1;
@@ -149,6 +155,8 @@
 
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
+
+      padding: 0;
     }
   }
 
@@ -160,7 +168,7 @@
     text-transform: uppercase;
     color: #323648;
 
-    margin: 0 0 26px 0;
+    margin: 0 0 20px 0;
 
     @include mixins.respond-to(notDesktop) {
       font-size: 18px;
@@ -178,7 +186,7 @@
     line-height: 22px;
     color: #62646B;
 
-    margin: 0 0 40px 0;
+    margin: 0 0 34px 0;
 
     @include mixins.respond-to(notDesktop) {
       font-size: 18px;
@@ -194,7 +202,7 @@
     justify-content: flex-start;
     gap: 20px;
 
-    margin: 0 0 40px 0;
+    margin: 0 0 52px 0;
 
     @include mixins.respond-to(notDesktop) {
       flex-direction: column;
@@ -215,7 +223,7 @@
 
     transition: background-color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
 
-    padding: 6px 6px 6px 28px;
+    padding: 6px 6px 6px 22px;
 
     @include mixins.respond-to(notDesktop) {
       width: 100%;
@@ -283,12 +291,12 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 13px;
+    gap: 10px;
 
     width: 310px;
     min-height: 160px;
     border: 1px solid #484848;
-    border-radius: 20px;
+    border-radius: 12px;
 
     padding: 20px;
 
@@ -300,7 +308,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 8px;
+      gap: 12px;
 
       @include mixins.respond-to(notDesktop) {
 
@@ -403,7 +411,7 @@
 
   &__slider-navigation {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
 
     display: flex;
@@ -472,7 +480,7 @@
     justify-content: start;
 
     padding: 0 105px;
-    margin: 40px 0 30px 0;
+    margin: 40px 0 20px 0;
 
     @include mixins.respond-to(notDesktop) {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -489,6 +497,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      width: 370px;
+      height: auto;
 
       border: 1px solid #BBB9B8;
 

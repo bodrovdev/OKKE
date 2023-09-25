@@ -64,6 +64,14 @@
     }
   }
 
+  & .catalogue-heading-content {
+    margin: auto 105px 117px 105px !important;
+
+    @include mixins.respond-to(notDesktop) {
+      margin: 70px 5% 50px 5% !important;
+    }
+  }
+
   &__content-info {
     display: flex;
     flex-direction: column;

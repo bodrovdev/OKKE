@@ -101,6 +101,14 @@
     }
   }
 
+  & .catalogue-column-left {
+    gap: 13px !important;
+
+    @include mixins.respond-to(notDesktop) {
+      gap: 40px !important;
+    }
+  }
+
   &__column-title {
     font-size: 18px;
     font-weight: 700;
@@ -112,6 +120,15 @@
       line-height: 31px;
 
       max-width: 100%;
+    }
+  }
+
+  & .catalogue-title {
+
+    font-size: 22px !important;
+
+    @include mixins.respond-to(notDesktop) {
+      font-size: 25px !important;
     }
   }
 
