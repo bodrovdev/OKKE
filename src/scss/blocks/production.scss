@@ -89,6 +89,7 @@
   &__container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 60px;
 
     margin: 0 105px;
@@ -216,6 +217,8 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    max-width: 540px;
 
     @include mixins.respond-to(notDesktop) {
       gap: 20px;

@@ -474,7 +474,7 @@
 
   &__wrapper {
     display: grid;
-    grid-template: repeat(2, auto) / repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     gap: 30px;
     align-content: start;
     justify-content: start;
@@ -498,7 +498,7 @@
       align-items: center;
       justify-content: center;
 
-      width: 370px;
+      width: 100%;
       height: auto;
 
       border: 1px solid #BBB9B8;
@@ -506,9 +506,17 @@
       padding: 20px 30px 30px 30px;
 
       @include mixins.respond-to(notDesktop) {
+        // width: 100%;
+
         padding: 10px 20px 20px 20px;
       }
     }
+
+    // @media (min-width: 1024px) and (max-width: 1379px) {
+    //   &-item {
+    //     width: 100%;
+    //   }
+    // }
   }
 
   &__item {
